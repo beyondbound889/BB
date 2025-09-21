@@ -1,0 +1,27 @@
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Navbar from './components/Navbar';
+import Footer from './components/Footer';
+import Home from './pages/Home';
+import Innovation from './pages/Innovation';
+import About from './pages/About';
+import './App.css';
+function App() {
+  return (
+    // Set global styles on the main container
+    <div className="bg-[#F4F1DE] text-[#1E2F23] font-['Poppins']">
+      <Router>
+        <Navbar />
+        <main>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/innovation" element={<Innovation />} /> 
+            <Route path="/about" element={<About />} />
+          </Routes>
+        </main>
+        <Footer />
+      </Router>
+    </div>
+  );
+}
+
+export default App;
