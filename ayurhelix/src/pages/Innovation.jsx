@@ -1,14 +1,85 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React from "react";
+import { motion } from "framer-motion";
+import AnimatedCard from "../components/AnimatedCard";
+import Marquee from 'react-fast-marquee';
+// Animation variants (add these!)
+const validation=[
+  {
+    img:"/assets/16.png"
+  },
+  {
+    img:"/assets/17.png"
+  },
+  {
+    img:"/assets/18.png"
+  },
+  {
+    img:"/assets/19.png"
+  },
+  {
+    img:"/assets/21.png"
+  },
+  {
+    img:"/assets/22.png"
+  },
+  {
+    img:"/assets/23.png"
+  }
+]
+const containerVariants = {
+  hidden: {},
+  visible: {
+    transition: { staggerChildren: 0.2 },
+  },
+};
+const fadeInFromBottom = {
+  hidden: { y: 30, opacity: 0 },
+  visible: {
+    y: 0,
+    opacity: 1,
+    transition: { duration: 0.8, ease: "easeOut" },
+  },
+};
+const scaleIn = {
+  hidden: { scale: 0.8, opacity: 0 },
+  visible: {
+    scale: 1,
+    opacity: 1,
+    transition: { duration: 0.6, ease: "easeOut" },
+  },
+};
+
+// ...existing code...
 
 const ingredients = [
-  { name: 'Berberine', benefit: 'Reduces plasma glucose, improves lipid control, supports diabetic complications.' },
-  { name: 'Gudmar', benefit: 'Enhances insulin production, effective for both Type 1 & Type 2 diabetes.' },
-  { name: 'Karela', benefit: 'Contains charantin and momordicin, acts as a hypoglycemic agent.' },
-  { name: 'Vijaysar', benefit: 'Protects pancreatic cells, promotes insulin secretion via antioxidants.' },
-  { name: 'Jambu Seed', benefit: 'Improves insulin sensitivity, reduces sugar absorption.' },
-  { name: 'Turmeric', benefit: 'Curcumin lowers blood sugar and inflammation, supports chronic care.' },
-  { name: 'Amalaki', benefit: 'Prevents glucose spikes, boosts metabolism, protects heart health.' },
+  {
+    name: "Karela",
+    benefit: "Contains charantin and momordicin, acts as a hypoglycemic agent.",
+    img: "/assets/Karela.jpeg",
+  },
+  {
+    name: "Vijaysar",
+    benefit:
+      "Protects pancreatic cells, promotes insulin secretion via antioxidants.",
+    img: "/assets/vijaysar.jpeg",
+  },
+  {
+    name: "Jambu Seed",
+    benefit: "Improves insulin sensitivity, reduces sugar absorption.",
+    img: "/assets/Jamun.jpeg",
+  },
+  {
+    name: "Turmeric",
+    benefit:
+      "Curcumin lowers blood sugar and inflammation, supports chronic care.",
+    img: "/assets/Turmeric.jpeg",
+  },
+  {
+    name: "Amalaki",
+    benefit:
+      "Prevents glucose spikes, boosts metabolism, protects heart health.",
+    img: "/assets/Amalki.jpeg",
+  },
 ];
 
 const Innovation = () => {
@@ -22,79 +93,186 @@ const Innovation = () => {
         viewport={{ once: true }}
         className="text-center mb-12"
       >
-        <h2 className="text-4xl font-bold text-[#3b3b3b]">Innovation Without Compromise</h2>
+        <h2 className="text-4xl font-bold text-[#3b3b3b]">
+          Innovation Without Compromise
+        </h2>
         <p className="mt-4 text-lg text-gray-600 max-w-3xl mx-auto">
-          “Diabetes care comes with a bitter choice: Fast but risky allopathy, or safe but slow Ayurveda.
-          Why should healing come with harm or compromise?”
+          “Diabetes care comes with a bitter choice: Fast but risky allopathy,
+          or safe but slow Ayurveda. Why should healing come with harm or
+          compromise?”
         </p>
       </motion.div>
-
+      <motion.section
+        className="py-12 md:py-20 bg-white overflow-hidden"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.3 }}
+        variants={containerVariants}
+      >
+        <div className="container mx-auto px-6">
+          <motion.div variants={fadeInFromBottom} className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold font-['Source_Serif_4'] text-[#216041]">
+              The Unaddressed Challenge in Diabetes Care
+            </h2>
+          </motion.div>
+          <div className="grid md:grid-cols-2 gap-8 text-center">
+            <motion.div
+              variants={scaleIn}
+              className="bg-[#dec493] p-8 rounded-lg shadow-md border-l-4 border-[#588157]"
+            >
+              <h3 className="text-xl font-bold text-[#3A5A40] font-['Source_Serif_4'] mb-2">
+                Allopathy's Dilemma
+              </h3>
+              <p>Effective, but with severe long-term side effects.</p>
+            </motion.div>
+            <motion.div
+              variants={scaleIn}
+              className="bg-[#dec493] p-8 rounded-lg shadow-md border-l-4 border-[#A3B18A]"
+            >
+              <h3 className="text-xl font-bold text-[#3A5A40] font-['Source_Serif_4'] mb-2">
+                Ayurveda's Limitation
+              </h3>
+              <p>
+                Safe, but traditionally slow-acting and lacks clinical
+                validation.
+              </p>
+            </motion.div>
+          </div>
+        </div>
+      </motion.section>
       {/* Glycomics Solution */}
       <motion.div
-        initial={{ opacity: 0, y: 30 }}
+        initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, delay: 0.2 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
         viewport={{ once: true }}
-        className="bg-white shadow-md p-8 max-w-full mb-16"
+        className="relative flex justify-between items-center bg-white/80 backdrop-blur-md shadow-xl p-10 rounded-2xl border border-gray-200/40 max-w-6xl mx-auto mb-20 overflow-hidden my-10"
       >
-        <h3 className="text-2xl font-semibold text-[#2f2f2f] mb-4">Introducing Glycomics</h3>
-        <ul className="list-disc list-inside text-gray-700 space-y-2">
-          <li>As effective and fast as allopathy</li>
-          <li>As safe and natural as Ayurveda</li>
-          <li>Doctor-formulated, evidence-backed</li>
-          <li>No known side effects</li>
-          <li>Proprietary formulation under Patent Application No-202511061644</li>
-        </ul>
-        <p className="mt-4 text-sm text-gray-500">Dosage: Twice a day before meals</p>
-      </motion.div>
-
-      {/* Ingredient Highlights */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto mb-20">
-        {ingredients.map((item, index) => (
-          <motion.div
-            key={index}
-            initial={{ opacity: 0, y: 40 }}
+        {/* Left Content */}
+        <div className="mx-10 max-w-md">
+          <motion.h3
+            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: index * 0.1 }}
-            viewport={{ once: true }}
-            className="bg-white border border-gray-200 rounded-lg p-6 shadow-sm"
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="text-4xl font-bold bg-gradient-to-r from-emerald-500 to-blue-600 bg-clip-text text-[#216041] mb-6"
           >
-            <h4 className="text-lg font-bold text-[#4b4b4b] mb-2">{item.name}</h4>
-            <p className="text-gray-600 text-sm">{item.benefit}</p>
+            Introducing Glycomics
+          </motion.h3>
+
+          <motion.ul
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={{
+              hidden: { opacity: 0 },
+              visible: {
+                opacity: 1,
+                transition: { staggerChildren: 0.15 },
+              },
+            }}
+            className="list-disc list-inside text-gray-700 space-y-3 text-lg"
+          >
+            {[
+              "As effective and fast as allopathy",
+              "As safe and natural as Ayurveda",
+              "Doctor-formulated, evidence-backed",
+              "No known side effects",
+            ].map((item, i) => (
+              <motion.li
+                key={i}
+                variants={{
+                  hidden: { opacity: 0, x: -20 },
+                  visible: { opacity: 1, x: 0 },
+                }}
+              >
+                {item}
+              </motion.li>
+            ))}
+          </motion.ul>
+
+          <p className="mt-6 text-sm text-gray-500 italic">
+            Dosage:{" "}
+            <span className="font-semibold text-gray-700">
+              Twice a day before meals
+            </span>
+          </p>
+        </div>
+
+        {/* Right Content - Product Image */}
+        <div className="relative">
+          {/* Glowing Background */}
+          <div className="absolute -inset-10 bg-gradient-to-tr from-emerald-300/30 to-blue-400/20 rounded-full blur-3xl animate-pulse" />
+
+          <motion.img
+            src="/assets/Branding.png"
+            alt="Glycomics Product"
+            whileHover={{ scale: 1.08, rotate: 2 }}
+            transition={{ type: "spring", stiffness: 200 }}
+            className="relative z-10 mx-auto h-72 drop-shadow-2xl"
+          />
+        </div>
+      </motion.div>
+      <div className="text-center mb-12 bg-white p-6">
+        <h3 className="text-3xl font-bold text-[#216041] my-10">
+          What makes it Different
+        </h3>
+        <div className="flex gap-6">
+          <motion.div
+            variants={scaleIn}
+            className="flex w-1/2 bg-[#dec493] p-8 rounded-lg shadow-md border-l-4 border-[#588157] justify-around"
+          >
+            <img
+              src="/assets/Berberine.jpeg"
+              alt="Berberine"
+              className="w-1/5 object-cover mb-4 rounded-md"
+            />
+            <div>
+              <h3 className="text-xl font-bold text-[#3A5A40] font-['Source_Serif_4'] mb-2">
+                Berberine (HCL)
+              </h3>
+              <p>Clinically proven efficacy, comparable to Metformin</p>
+            </div>
           </motion.div>
-        ))}
+          <motion.div
+            variants={scaleIn}
+            className="flex w-1/2 bg-[#dec493] p-8 rounded-lg shadow-md border-l-4 border-[#A3B18A]"
+          >
+            <img
+              src="/assets/ayurveda.png"
+              alt="Ayurveda"
+              className="w-1/5 object-cover mb-4 rounded-md"
+            />
+            <div>
+              <h3 className="text-xl font-bold text-[#3A5A40] font-['Source_Serif_4'] mb-2">
+                Ayurvedic Synergy
+              </h3>
+              <p>
+                Each herb contributes a unique function, making Glycomics the
+                most effective berberine-based anti-diabetic formulation
+              </p>
+            </div>
+          </motion.div>
+        </div>
+        <div>
+          <h1 className="text-3xl text-[#216041] text-start mt-12 font-bold">Herbal Contributions</h1>
+          <div className="flex flex-wrap gap-8 mx-auto p-10 bg-white">
+            {ingredients.map((item, index) => (
+              <AnimatedCard item={item} index={index} key={index} />
+            ))}
+          </div>
+        </div>
       </div>
+      {/* Ingredient Highlights */}
 
       {/* Differentiators */}
-      <motion.div
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, delay: 0.3 }}
-        viewport={{ once: true }}
-        className="text-center max-w-3xl mx-auto mb-16"
-      >
-        <h3 className="text-2xl font-semibold text-[#2f2f2f] mb-4">How We’re Different</h3>
-        <ul className="list-disc list-inside text-gray-700 space-y-2 text-left">
-          <li>No tradeoff between safety and speed</li>
-          <li>Backed by traditional wisdom and clinical science</li>
-          <li>No compromise on taste, portability, or user experience</li>
-        </ul>
-      </motion.div>
-
-      {/* Did You Know Section */}
-      <motion.div
-        initial={{ opacity: 0, scale: 0.95 }}
-        whileInView={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.6, delay: 0.4 }}
-        viewport={{ once: true }}
-        className="bg-[#fefefe] border border-pink-100 rounded-xl p-8 shadow-md max-w-3xl mx-auto"
-      >
-        <h3 className="text-xl font-bold text-black mb-4">Did You Know?</h3>
-        <ul className="list-disc list-inside text-gray-700 space-y-2">
-          <li>Berberine activates AMPK — the same pathway targeted by metformin, but naturally.</li>
-          <li>Gudmar’s gymnemic acids can reduce sugar cravings by blocking sweet receptors on the tongue.</li>
-        </ul>
-      </motion.div>
+      <div>
+        <h1 className="mx-8 text-3xl text-[#216041] text-start font-bold">Product Certifications</h1>
+        <Marquee gradient={false} speed={80} className="bg-[#dec493] text-white py-4">
+          {validation.map((item, index)=>(
+            <img src={item.img} alt="Validation logos" className="h-40 mx-10" key={index}/>
+          ))}
+        </Marquee>
+      </div>
     </section>
   );
 };

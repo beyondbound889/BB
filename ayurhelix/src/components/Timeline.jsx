@@ -1,56 +1,77 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-// --- Timeline Data ---
 const timelineData = [
   {
-    step: "Step 1",
-    title: "Research & Formulation",
-    subtitle: "Ayurvedic Lab",
-    image: "/images/research.jpg",
+    step: "Nov 2023 - Dec 2023",
+    title: "Firm Formation",
+    subtitle: "Beyond Bound",
+    image: "/assets/FF.jpeg",
     points: [
-      "Combining ancient Ayurvedic wisdom with modern science.",
-      "Ensuring a synergistic formula for Glycomics.",
+      "Beyond Bound officially registered",
+      "Vision to revolutionize diabetes care with Ayurveda & modern science",
     ],
   },
   {
-    step: "Step 2",
-    title: "IPR & Patenting",
-    subtitle: "Legal Team",
-    image: "/images/patent.jpg",
+    step: "Dec 2023 - May 2024",
+    title: "R&D Kickoff",
+    subtitle: "Heal the nature",
+    image: "/assets/rnd.png",
     points: [
-      "Filed patents to protect intellectual property.",
-      "Ensured product differentiation and trust.",
+      "Anti-diabetic medicine research initiated",
+      "Glycomics & herbal R&D activities started",
     ],
   },
   {
-    step: "Step 3",
-    title: "Manufacturing & QC",
-    subtitle: "Certified Facility",
-    image: "/images/manufacturing.jpg",
+    step: "June 2024 - Sept 2024",
+    title: "Formulation Development",
+    subtitle: "Something Brewing",
+    image: "/assets/ct.jpeg",
     points: [
-      "Partnered with GMP-certified manufacturers.",
-      "Implemented strict quality control protocols.",
+      "3–4 Ayurvedic formulations prepared",
+      "Pre-clinical validation and refinement underway",
+      "Beyond Bound Trademark Granted received"
     ],
   },
   {
-    step: "Step 4",
-    title: "Distribution",
-    subtitle: "Pharma Network",
-    image: "/images/distribution.jpg",
-    points: [
-      "Built a network of doctors and pharmacies.",
-      "Ensured wide patient access across regions.",
-    ],
-  },
-  {
-    step: "Step 5",
-    title: "Clinical Validation",
+    step: "Oct 2024 – April  2025",
+    title: "Final Formulation Stage",
     subtitle: "Medical Trials",
-    image: "/images/clinical.jpg",
+    image: "/assets/fs.png",
     points: [
-      "Conducted Phase III trials for efficacy.",
-      "Committed to rigorous clinical testing.",
+      "Advanced R&D and optimization completed",
+      "Final formulation selected after trials and expert review",
+      "Patent applied for formualtuon"
+    ],
+  },
+  {
+    step: "May 2025 - June 2025",
+    title: "Strategic Partnership",
+    subtitle: "Pharma Network",
+    image: "/assets/partner.jpeg",
+    points: [
+      "Collaboration with Riidl Incubation Center for scaling and innovation support",
+    ],
+  },
+  {
+    step: "June 2025 - Aug 2025",
+    title: "Product Ready with Certification",
+    subtitle: "Market Ready",
+    image: "/assets/Branding.png",
+    points: [
+      "Final product in hand",
+      "Required certifications achieved (AYUSH, FSSAI, ISO 9001:2015, GMP, HACCP, etc.)",
+      "Ready for market launch",
+    ],
+  },
+  {
+    step: "Aug 2025",
+    title: "Official Incorporation",
+    subtitle: "Registration",
+    image: "/assets/logo.png",
+    points: [
+      "Registered as Ayurhelix Pvt Ltd",
+      "Expanding towards commercialization and growth",
     ],
   },
 ];
@@ -76,7 +97,7 @@ const Timeline = () => {
         variants={fadeUp}
         className="text-center mb-16"
       >
-        <h2 className="text-4xl font-bold text-white">Our Journey of Innovation.</h2>
+        <h2 className="text-4xl font-bold text-[#216041]">Our Journey of Innovation.</h2>
       </motion.div>
 
       {/* Vertical Line */}
@@ -99,11 +120,8 @@ const Timeline = () => {
                 index % 2 === 0 ? "left-0 pr-6" : "right-0 pl-6"
               }`}
             >
-              <div className="bg-gradient-to-br from-[#fff7e2] to-[#f0eac0] rounded-xl p-6 shadow-lg border border-[#e0d8b0] transition-transform hover:scale-[1.02]">
+              <div className="bg-white rounded-xl p-6 shadow-lg border border-[#e0d8b0] transition-transform hover:scale-[1.02]">
                 <div className="flex items-center gap-3 mb-4">
-                  <div className="w-10 h-10 rounded-full bg-[#3A5A40] flex items-center justify-center text-white font-bold text-sm shadow-md">
-                    {item.step}
-                  </div>
                   <h3 className="text-xl font-bold text-[#3A5A40] font-['Source_Serif_4']">
                     {item.title}
                   </h3>

@@ -1,5 +1,5 @@
-import { NavLink } from 'react-router-dom';
-
+import { NavLink } from 'react-router-dom';// Ensure you have a logo image in the specified 
+import Chat from './Chat';
 const Navbar = () => {
   return (
     <header className="bg-[#dec493] sticky top-0 z-50 shadow-lg">
@@ -16,6 +16,7 @@ const Navbar = () => {
           Contact Us
         </a>
       </nav>
+      <Chat/>
     </header>
   );
 };

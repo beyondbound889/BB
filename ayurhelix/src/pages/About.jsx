@@ -1,83 +1,110 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-
+import React from "react";
+import { motion } from "framer-motion";
 const About = () => {
+  const cardVariants = {
+    offscreen: {
+      opacity: 0,
+      scale: 0.8,
+      y: 50,
+    },
+    onscreen: {
+      opacity: 1,
+      scale: 1,
+      y: 0,
+      transition: {
+        type: "spring",
+        bounce: 0.3,
+        duration: 0.8,
+      },
+    },
+  };
   return (
-    <section className="bg-[#fdfdfc] text-gray-800 py-20 px-6 sm:px-12">
-      {/* Brand Story */}
-      <motion.div
-        initial={{ opacity: 0, y: -30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
-        viewport={{ once: true }}
-        className="max-w-4xl mx-auto text-center mb-16"
-      >
-        <h2 className="text-4xl font-bold text-[#3b3b3b] mb-6">Our Story</h2>
-        <p className="text-lg text-gray-700 leading-relaxed">
-          “It began with a chair in the corner, where my grandmother sat—strong, but challenged by diabetes.
-          Modern medicines relieved her sugar but cost her strength. When healing led to harm, a deeper purpose ignited:
-          Why can’t medicine feel like care instead of control?”
+    <>
+      <section className="flex flex-col items-center justify-center bg-white py-20 px-6 mx-auto text-center space-y-8">
+        <img
+          src="/assets/12.png"
+          alt="logo"
+          className="h-40 w-40 rounded-full shadow-lg shadow-[#dec493] object-cover"
+        />
+        <div>
+          <h1 className="text-4xl font-extrabold text-[#216041] mb-4">
+            Heal with Nature
+          </h1>
+          <h2 className="text-lg font-semibold text-gray-700 mb-2">
+            Mission:{" "}
+            <span className="font-normal">
+              To transform lives naturally through the power of Ayurveda
+            </span>
+          </h2>
+          <h2 className="text-lg font-semibold text-gray-700">
+            Vision:{" "}
+            <span className="font-normal">
+              Combining the timeless wisdom of Ayurveda with trusted quality and
+              modern science to help people live healthier every day
+            </span>
+          </h2>
+        </div>
+      </section>
+
+      <section className="bg-[#dec493] py-20">
+        <h1 className="flex justify-center text-5xl font-bold text-[#216041]">
+          Team
+        </h1>
+        <div className="container mx-auto mt-12 grid grid-cols-1 md:grid-cols-2 gap-12 px-6 justify-around">
+          <motion.div
+            className="flex flex-col items-center"
+            initial="offscreen"
+            whileInView="onscreen"
+            viewport={{ once: true, amount: 0.8 }}
+            variants={cardVariants}
+          >
+            <img
+              src="/assets/PC.png"
+              alt="CEO"
+              className="h-96 w-72 object-cover rounded-lg shadow-lg"
+            />
+            <h3 className="mt-4 text-2xl font-bold text-center">CEO</h3>
+            <p className="mt-2 text-center max-w-xs">
+              Visionary leader driving innovation and growth.
+            </p>
+          </motion.div>
+
+          <motion.div
+            className="flex flex-col items-center"
+            initial="offscreen"
+            whileInView="onscreen"
+            viewport={{ once: true, amount: 0.8 }}
+            variants={cardVariants}
+          >
+            <img
+              src="/assets/PC.png"
+              alt="Co-Founder"
+              className="h-96 w-72 object-cover rounded-lg shadow-lg"
+            />
+            <h3 className="mt-4 text-2xl font-bold text-center">Co-Founder</h3>
+            <p className="mt-2 text-center max-w-xs">
+              Passionate about creating impactful solutions.
+            </p>
+          </motion.div>
+        </div>
+      </section>
+      <section className="bg-white py-20 px-6">
+         <h1 className="flex justify-center text-5xl font-bold text-[#216041]">
+          About Ayurhelix
+        </h1>
+        <p className="mt-8 max-w-5xl mx-auto text-gray-700 text-lg leading-relaxed">
+          Ayurhelix, operated by Beyond Bound, is committed to transforming lives naturally through Ayurveda. Our flagship product, Glycomics, is a patented formula born from blending ancient Ayurvedic wisdom with modern science.
+
+We aim to offer safe, effective alternatives that address the side effects caused by allopathic medicines. By combining the fast action of allopathy with the gentle safety of Ayurveda, we create products designed for today’s health challenges without compromise.
+
+Our mission is to harness the healing power of nature to promote wellness and improve quality of life. At Ayurhelix, we believe in holistic health that restores balance naturally and sustainably.
+
+Our vision is to unite time-tested Ayurvedic principles with scientific rigor, helping people live healthier every day.
+
+Ayurhelix stands as a bridge between traditional healing and modern innovation, offering wellness solutions that are both quick and safe. Join us on a journey of natural healing and renewed vitality.
         </p>
-      </motion.div>
-
-      {/* Vision & Mission */}
-      <motion.div
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, delay: 0.2 }}
-        viewport={{ once: true }}
-        className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-5xl mx-auto mb-20"
-      >
-        <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">
-          <h3 className="text-xl font-semibold text-black mb-2">Vision</h3>
-          <p className="text-gray-700 text-sm">
-            Transform lives naturally through the power of Ayurveda.
-          </p>
-        </div>
-        <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">
-          <h3 className="text-xl font-semibold text-black mb-2">Mission</h3>
-          <p className="text-gray-700 text-sm">
-            Combining timeless Ayurvedic wisdom with trusted quality and modern science, to help people live healthier every day.
-          </p>
-        </div>
-      </motion.div>
-
-      {/* Team Section */}
-      <motion.div
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, delay: 0.3 }}
-        viewport={{ once: true }}
-        className="max-w-4xl mx-auto mb-20"
-      >
-        <h3 className="text-2xl font-bold text-[#2f2f2f] mb-6 text-center">Meet the Team</h3>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
-          <div className="bg-white border border-gray-200 rounded-lg p-6 shadow-sm text-center">
-            <h4 className="text-lg font-semibold text-gray-800">Priyanshu Chauhan</h4>
-            <p className="text-sm text-gray-600">Founder & CEO</p>
-          </div>
-          <div className="bg-white border border-gray-200 rounded-lg p-6 shadow-sm text-center">
-            <h4 className="text-lg font-semibold text-gray-800">Dr. Meet Ramani</h4>
-            <p className="text-sm text-gray-600">R&D Advisor</p>
-          </div>
-        </div>
-      </motion.div>
-
-      {/* Why Choose Us */}
-      <motion.div
-        initial={{ opacity: 0, scale: 0.95 }}
-        whileInView={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.6, delay: 0.4 }}
-        viewport={{ once: true }}
-        className="bg-[#fefefe] border border-[#dec493] rounded-xl p-8 shadow-md max-w-3xl mx-auto text-center"
-      >
-        <h3 className="text-xl font-bold text-black mb-4">Why Choose Us</h3>
-        <ul className="list-disc list-inside text-gray-700 space-y-2 text-left">
-          <li>Trusted, evidence-based innovation</li>
-          <li>Ethical, patient-focused approach</li>
-        </ul>
-      </motion.div>
-    </section>
+      </section>
+    </>
   );
 };
 

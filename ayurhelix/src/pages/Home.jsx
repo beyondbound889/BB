@@ -1,8 +1,14 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import Timeline from "../components/Timeline";
-
+import Risks from "../components/Risks";
 // Animation variants
+const drug = {
+  name: "DrugA",
+  description: "Used for treating condition X.",
+  sideEffects: ["Nausea", "Dizziness", "Headache"],
+};
+
 const containerVariants = {
   hidden: {},
   visible: {
@@ -53,7 +59,7 @@ const Home = () => {
           style={{ zIndex: 1 }}
         />
         <div
-          className="relative container mx-auto px-6 py-16 md:py-20 text-center flex flex-col items-center justify-center"
+          className="relative container mx-auto px-6 py-16 my-20 md:py-20 text-center flex flex-col items-center justify-center"
           style={{ zIndex: 2 }}
         >
           <motion.h1
@@ -64,65 +70,38 @@ const Home = () => {
           </motion.h1>
           <motion.p
             variants={fadeInFromBottom}
-            className="mt-4 text-lg md:text-xl text-[#3A5A40] max-w-3xl mx-auto font-medium"
+            className="mt-4 text-xl font-bold md:text-xl text-[#3A5A40] max-w-3xl mx-auto font-medium"
           >
             Combining the timeless wisdom of Ayurveda with trusted quality and
             modern science to help people live healthier every day
           </motion.p>
-          <motion.div variants={fadeInFromBottom}>
-            <Link
-              to="/innovation"
-              className="mt-8 inline-block bg-[#588157] text-white font-bold py-3 px-8 rounded-full text-lg shadow-lg hover:bg-[#3A5A40] transition-transform transform hover:scale-105"
-            >
-              Discover the Science
-            </Link>
-          </motion.div>
         </div>
       </motion.section>
-
       {/* Problem Section */}
       <motion.section
-        className="py-12 md:py-20 bg-white overflow-hidden"
+        className="py-12 md:py-20 bg-white overflow-hidden px-20"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.3 }}
         variants={containerVariants}
       >
-        <div className="container mx-auto px-6">
-          <motion.div variants={fadeInFromBottom} className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold font-['Source_Serif_4'] text-[#1E2F23]">
-              The Unaddressed Challenge in Diabetes Care
-            </h2>
-          </motion.div>
-          <div className="grid md:grid-cols-2 gap-8 text-center">
-            <motion.div
-              variants={scaleIn}
-              className="bg-[#F4F1DE] p-8 rounded-lg shadow-md border-l-4 border-[#588157]"
-            >
-              <h3 className="text-xl font-bold text-[#3A5A40] font-['Source_Serif_4'] mb-2">
-                Allopathy's Dilemma
-              </h3>
-              <p>Effective, but with severe long-term side effects.</p>
-            </motion.div>
-            <motion.div
-              variants={scaleIn}
-              className="bg-[#F4F1DE] p-8 rounded-lg shadow-md border-l-4 border-[#A3B18A]"
-            >
-              <h3 className="text-xl font-bold text-[#3A5A40] font-['Source_Serif_4'] mb-2">
-                Ayurveda's Limitation
-              </h3>
-              <p>
-                Safe, but traditionally slow-acting and lacks clinical
-                validation.
-              </p>
-            </motion.div>
+        <h1 className="text-[#216041] text-xl">Focus</h1>
+        <div className="flex justify-between">
+          <div className="w-3/5">
+            <h1 className="text-4xl">Advancing holistic diabetic care by seamlessly integrating ancient Ayurvedic wisdom with cutting-edge clinical science, creating fast, safe, and natural solutions</h1>
+            <h1 className="text-base opacity-70 mt-4">
+              We develop and deliver innovative, clinically backed Ayurvedic solutions that effectively manage diabetes while promoting holistic well-being. By combining timeless natural wisdom with rigorous scientific validation, we create safer, faster-acting alternatives that empower patients on their journey to better health and vitality
+            </h1>
+          </div>
+          <div className="flex hover:underline text-[#588157] font-bold items-center">
+            <Link to="/innovation">Explore our Innovations</Link>
           </div>
         </div>
       </motion.section>
 
       {/* Timeline Section */}
       <Timeline />
-
+      <Risks/>
       {/* Call-to-Action Section */}
       <motion.section
         className="py-12 md:py-20 text-black text-center bg-white"
@@ -148,7 +127,7 @@ const Home = () => {
           <motion.div variants={fadeInFromBottom}>
             <Link
               to="/contact"
-              className="inline-block bg-white text-[#588157] font-bold py-3 px-8 rounded-full text-lg shadow-lg hover:bg-[#F4F1DE] hover:text-[#3A5A40] transition-transform transform hover:scale-105"
+              className="inline-block bg-[#dec493] text-[#216041] font-bold py-3 px-8 rounded-full text-lg shadow-lg hover:bg-[#F4F1DE] hover:text-[#3A5A40] transition-transform transform hover:scale-105"
             >
               Get in Touch
             </Link>
