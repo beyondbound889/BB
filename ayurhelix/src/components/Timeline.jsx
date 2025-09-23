@@ -48,7 +48,7 @@ const timelineData = [
     step: "May 2025 - June 2025",
     title: "Strategic Partnership",
     subtitle: "Pharma Network",
-    image: "/assets/partner.jpeg",
+    image: "/assets/riddl.png",
     points: [
       "Collaboration with Riidl Incubation Center for scaling and innovation support",
     ],

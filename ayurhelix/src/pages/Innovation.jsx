@@ -2,6 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import AnimatedCard from "../components/AnimatedCard";
 import Marquee from 'react-fast-marquee';
+import Blogs from "../components/Blogs";
 // Animation variants (add these!)
 const validation=[
   {
@@ -54,31 +55,31 @@ const scaleIn = {
 const ingredients = [
   {
     name: "Karela",
-    benefit: "Contains charantin and momordicin, acts as a hypoglycemic agent.",
+    benefit: "Mimics natural insulin action ",
     img: "/assets/Karela.jpeg",
   },
   {
     name: "Vijaysar",
     benefit:
-      "Protects pancreatic cells, promotes insulin secretion via antioxidants.",
+      "Provides metabolic protection",
     img: "/assets/vijaysar.jpeg",
   },
   {
     name: "Jambu Seed",
-    benefit: "Improves insulin sensitivity, reduces sugar absorption.",
+    benefit: "Supports pancreatic health & β-cell function",
     img: "/assets/Jamun.jpeg",
   },
   {
-    name: "Turmeric",
+    name: "Turmeric & Amla",
     benefit:
-      "Curcumin lowers blood sugar and inflammation, supports chronic care.",
-    img: "/assets/Turmeric.jpeg",
+      "Boost berberine bioavailability",
+    img: "/assets/tna.jpeg",
   },
   {
-    name: "Amalaki",
+    name: "Gudmar",
     benefit:
-      "Prevents glucose spikes, boosts metabolism, protects heart health.",
-    img: "/assets/Amalki.jpeg",
+      "Regulates sugar cravings 🍫",
+    img: "/assets/gurmar.jpeg",
   },
 ];
 
@@ -208,11 +209,11 @@ const Innovation = () => {
             alt="Glycomics Product"
             whileHover={{ scale: 1.08, rotate: 2 }}
             transition={{ type: "spring", stiffness: 200 }}
-            className="relative z-10 mx-auto h-72 drop-shadow-2xl"
+            className="relative z-10 mx-auto h-100 drop-shadow-2xl"
           />
         </div>
       </motion.div>
-      <div className="text-center mb-12 bg-white p-6">
+      <div className="text-center bg-white p-6">
         <h3 className="text-3xl font-bold text-[#216041] my-10">
           What makes it Different
         </h3>
@@ -231,6 +232,7 @@ const Innovation = () => {
                 Berberine (HCL)
               </h3>
               <p>Clinically proven efficacy, comparable to Metformin</p>
+              <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC2410097/" target="_blank" className="text-blue text-lg hover:text-xl">Refer Here →</a>
             </div>
           </motion.div>
           <motion.div
@@ -247,14 +249,14 @@ const Innovation = () => {
                 Ayurvedic Synergy
               </h3>
               <p>
-                Each herb contributes a unique function, making Glycomics the
+                Supportive herbs contributes a unique function, making Glycomics the
                 most effective berberine-based anti-diabetic formulation
               </p>
             </div>
           </motion.div>
         </div>
         <div>
-          <h1 className="text-3xl text-[#216041] text-start mt-12 font-bold">Herbal Contributions</h1>
+          <h1 className="text-3xl mx-8 text-[#216041] text-start mt-12 font-bold">Herbal Contributions</h1>
           <div className="flex flex-wrap gap-8 mx-auto p-10 bg-white">
             {ingredients.map((item, index) => (
               <AnimatedCard item={item} index={index} key={index} />
@@ -265,14 +267,15 @@ const Innovation = () => {
       {/* Ingredient Highlights */}
 
       {/* Differentiators */}
-      <div>
-        <h1 className="mx-8 text-3xl text-[#216041] text-start font-bold">Product Certifications</h1>
-        <Marquee gradient={false} speed={80} className="bg-[#dec493] text-white py-4">
+      <div className="bg-white p-6"> 
+        <h1 className="mx-8 mb-6 text-3xl text-[#216041] text-start font-bold">Product Certifications</h1>
+        <Marquee gradient={false} speed={80} className="text-white py-4">
           {validation.map((item, index)=>(
             <img src={item.img} alt="Validation logos" className="h-40 mx-10" key={index}/>
           ))}
         </Marquee>
       </div>
+      <Blogs/>
     </section>
   );
 };

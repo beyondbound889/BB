@@ -59,12 +59,14 @@ const About = () => {
             variants={cardVariants}
           >
             <img
-              src="/assets/PC.png"
+              src="/assets/Priyanshu.png"
               alt="CEO"
-              className="h-96 w-72 object-cover rounded-lg shadow-lg"
+              className="h-96 w-100 object-cover rounded-lg shadow-lg bg-white"
             />
-            <h3 className="mt-4 text-2xl font-bold text-center">CEO</h3>
-            <p className="mt-2 text-center max-w-xs">
+            <h3 className="mt-4 text-2xl font-bold text-center text-[#216041]">
+              Director & Founder
+            </h3>
+            <p className="mt-2 text-center max-w-xs text-[#216041]">
               Visionary leader driving innovation and growth.
             </p>
           </motion.div>
@@ -77,35 +79,48 @@ const About = () => {
             variants={cardVariants}
           >
             <img
-              src="/assets/PC.png"
+              src="/assets/Ramani.png"
               alt="Co-Founder"
-              className="h-96 w-72 object-cover rounded-lg shadow-lg"
+              className="h-96 w-100 object-cover rounded-lg shadow-lg bg-white"
             />
-            <h3 className="mt-4 text-2xl font-bold text-center">Co-Founder</h3>
-            <p className="mt-2 text-center max-w-xs">
+            <h3 className="mt-4 text-2xl font-bold text-center text-[#216041]">
+              R&D Head
+            </h3>
+            <p className="mt-2 text-center max-w-xs text-[#216041]">
               Passionate about creating impactful solutions.
             </p>
           </motion.div>
         </div>
       </section>
       <section className="bg-white py-20 px-6">
-         <h1 className="flex justify-center text-5xl font-bold text-[#216041]">
+        <h1 className="flex justify-center text-5xl font-bold text-[#216041]">
           About Ayurhelix
         </h1>
         <p className="mt-8 max-w-5xl mx-auto text-gray-700 text-lg leading-relaxed">
-          Ayurhelix, operated by Beyond Bound, is committed to transforming lives naturally through Ayurveda. Our flagship product, Glycomics, is a patented formula born from blending ancient Ayurvedic wisdom with modern science.
-
-We aim to offer safe, effective alternatives that address the side effects caused by allopathic medicines. By combining the fast action of allopathy with the gentle safety of Ayurveda, we create products designed for today’s health challenges without compromise.
-
-Our mission is to harness the healing power of nature to promote wellness and improve quality of life. At Ayurhelix, we believe in holistic health that restores balance naturally and sustainably.
-
-Our vision is to unite time-tested Ayurvedic principles with scientific rigor, helping people live healthier every day.
-
-Ayurhelix stands as a bridge between traditional healing and modern innovation, offering wellness solutions that are both quick and safe. Join us on a journey of natural healing and renewed vitality.
+          Ayurhelix Pvt Ltd, officially registered in August 2025, began its
+          journey as Beyond Bound in November 2023 with a single dream — to
+          bring innovation into Ayurveda. This vision was deeply personal.
+          Inspired by the pain and struggles faced by his grandmother, Founder
+          Priyanshu Chauhan established the venture in 2023 to create solutions
+          that blend the ancient wisdom of Ayurveda with modern scientific
+          innovation. Today, Ayurhelix Pvt Ltd is committed to developing
+          clinically validated, safe, and effective Ayurvedic formulations that
+          can transform healthcare. The company is led by two directors, united
+          by a shared passion for impact, innovation, and well-being
         </p>
       </section>
     </>
   );
 };
 
+
 export default About;
+// 🏢 Official Company Details
+
+// 	•	Date of Origin: November 2023 (as Beyond Bound), Incorporated August 2025
+// 	•	Registered Office:
+// Moh. Natha Singh, Maharana Pratap Colony,
+// Jaspur, Udham Singh Nagar, Uttarakhand – 244712
+// 	•	Communication Office:
+// BioRiidl, Somaiya Vidya Vihar,
+// Ghatkopar, Mumbai – 400077
