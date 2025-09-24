@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { Helmet } from '@dr.pogodin/react-helmet';
 const About = () => {
   const cardVariants = {
     offscreen: {
@@ -20,9 +21,13 @@ const About = () => {
   };
   return (
     <>
+      <Helmet>
+        <title>About Beyond Bound</title>
+        <meta name="description" content="Beyond Bound Info" />
+      </Helmet>
       <section className="flex flex-col items-center justify-center bg-white py-20 px-6 mx-auto text-center space-y-8">
         <img
-          src="/assets/12.png"
+          src="https://res.cloudinary.com/dmvolzsaz/image/upload/v1758644988/12_dw3qfa.png"
           alt="logo"
           className="h-40 w-40 rounded-full shadow-lg shadow-[#dec493] object-cover"
         />
@@ -98,7 +103,7 @@ const About = () => {
         </h1>
         <p className="mt-8 max-w-5xl mx-auto text-gray-700 text-lg leading-relaxed">
           Ayurhelix Pvt Ltd, officially registered in August 2025, began its
-          journey as Beyond Bound in November 2023 with a single dream — to
+          journey as Beyond Bound in November 2023 with a single dream to
           bring innovation into Ayurveda. This vision was deeply personal.
           Inspired by the pain and struggles faced by his grandmother, Founder
           Priyanshu Chauhan established the venture in 2023 to create solutions

@@ -15,7 +15,7 @@ const timelineData = [
   {
     step: "Dec 2023 - May 2024",
     title: "R&D Kickoff",
-    subtitle: "Heal the nature",
+    subtitle: "Journey Begins",
     image: "/assets/rnd.png",
     points: [
       "Anti-diabetic medicine research initiated",
@@ -68,7 +68,7 @@ const timelineData = [
     step: "Aug 2025",
     title: "Official Incorporation",
     subtitle: "Registration",
-    image: "/assets/logo.png",
+    image: "https://res.cloudinary.com/dmvolzsaz/image/upload/v1758644988/12_dw3qfa.png",
     points: [
       "Registered as Ayurhelix Pvt Ltd",
       "Expanding towards commercialization and growth",
@@ -76,7 +76,6 @@ const timelineData = [
   },
 ];
 
-// --- Animation Variant ---
 const fadeUp = {
   hidden: { opacity: 0, y: 40 },
   visible: {
@@ -88,23 +87,25 @@ const fadeUp = {
 
 const Timeline = () => {
   return (
-    <section className="bg-[#dec493] py-16 px-6 relative">
+    <section className="bg-[#dec493] py-10 px-3 sm:py-16 sm:px-6 relative overflow-x-hidden">
       {/* Title */}
       <motion.div
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
         variants={fadeUp}
-        className="text-center mb-16"
+        className="text-center mb-10 sm:mb-16"
       >
-        <h2 className="text-4xl font-bold text-[#216041]">Our Journey of Innovation.</h2>
+        <h2 className="text-2xl sm:text-4xl font-bold text-[#216041]">
+          Our Journey of Innovation.
+        </h2>
       </motion.div>
 
-      {/* Vertical Line */}
-      <div className="absolute left-1/2 transform -translate-x-1/2 top-32 bottom-16 w-1 bg-white z-0"></div>
+      {/* Vertical Line (desktop only) */}
+      <div className="hidden sm:block absolute left-1/2 transform -translate-x-1/2 top-32 bottom-16 w-1 bg-white z-0"></div>
 
       {/* Timeline Items */}
-      <div className="flex flex-col gap-24 relative z-10 max-w-5xl mx-auto">
+      <div className="flex flex-col gap-10 sm:gap-24 relative z-10 max-w-2xl sm:max-w-5xl mx-auto">
         {timelineData.map((item, index) => (
           <motion.div
             key={item.step}
@@ -112,24 +113,26 @@ const Timeline = () => {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            className="relative flex items-center justify-center"
+            className="relative flex flex-col sm:flex-row items-center justify-center"
           >
             {/* Content Card */}
             <div
-              className={`absolute w-[calc(50%-80px)] ${
-                index % 2 === 0 ? "left-0 pr-6" : "right-0 pl-6"
-              }`}
+              className={`w-full sm:absolute sm:w-[calc(50%-80px)] ${
+                index % 2 === 0
+                  ? "sm:left-0 sm:pr-6"
+                  : "sm:right-0 sm:pl-6"
+              } mb-6 sm:mb-0`}
             >
-              <div className="bg-white rounded-xl p-6 shadow-lg border border-[#e0d8b0] transition-transform hover:scale-[1.02]">
-                <div className="flex items-center gap-3 mb-4">
-                  <h3 className="text-xl font-bold text-[#3A5A40] font-['Source_Serif_4']">
+              <div className="bg-white rounded-xl p-4 sm:p-6 shadow-lg border border-[#e0d8b0] transition-transform hover:scale-[1.02]">
+                <div className="flex items-center gap-3 mb-2 sm:mb-4">
+                  <h3 className="text-lg sm:text-xl font-bold text-[#3A5A40] font-['Source_Serif_4']">
                     {item.title}
                   </h3>
                 </div>
-                <p className="text-[#588157] text-sm font-semibold mb-2">
+                <p className="text-[#588157] text-xs sm:text-sm font-semibold mb-1 sm:mb-2">
                   {item.subtitle}
                 </p>
-                <ul className="list-disc ml-5 text-[#1E2F23] text-sm space-y-1">
+                <ul className="list-disc ml-5 text-[#1E2F23] text-xs sm:text-sm space-y-1">
                   {item.points.map((point, i) => (
                     <li key={i}>{point}</li>
                   ))}
@@ -138,8 +141,8 @@ const Timeline = () => {
             </div>
 
             {/* Circle Marker on Line */}
-            <div className="relative z-10">
-              <div className="w-24 h-24 rounded-full overflow-hidden border-4 border-white shadow-lg bg-white flex items-center justify-center">
+            <div className="relative z-10 mx-auto sm:mx-0 mb-2 sm:mb-0">
+              <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-full overflow-hidden border-4 border-white shadow-lg bg-white flex items-center justify-center">
                 <img
                   src={item.image}
                   alt={item.title}
@@ -148,13 +151,15 @@ const Timeline = () => {
               </div>
             </div>
 
-            {/* Opposite Side Step Label */}
+            {/* Step Label */}
             <div
-              className={`absolute w-[calc(50%-80px)] top-1 ${
-                index % 2 === 0 ? "right-0 text-left pl-6" : "left-0 text-right pr-6"
+              className={`w-full sm:absolute sm:w-[calc(50%-80px)] top-1 ${
+                index % 2 === 0
+                  ? "sm:right-0 sm:text-left sm:pl-6"
+                  : "sm:left-0 sm:text-right sm:pr-6"
               }`}
             >
-              <div className="text-white text-sm font-bold bg-[#3A5A40] px-3 py-1 rounded shadow inline-block">
+              <div className="text-white text-xs sm:text-sm font-bold bg-[#3A5A40] px-2 py-1 rounded shadow inline-block">
                 {item.step}
               </div>
             </div>

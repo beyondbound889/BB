@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import Timeline from "../components/Timeline";
 import Risks from "../components/Risks";
+import { Helmet } from '@dr.pogodin/react-helmet';
 // Animation variants
 const drug = {
   name: "DrugA",
@@ -38,6 +39,10 @@ const HERO_IMAGE =
 const Home = () => {
   return (
     <>
+      <Helmet>
+        <title>Welcome to Beyond Bound</title>
+        <meta name="description" content="Ayurvedic solutions for diabetes" />
+      </Helmet>
       {/* Hero Section */}
       <motion.section
         className="relative bg-[#fff7e2] text-white overflow-hidden"
@@ -93,7 +98,7 @@ const Home = () => {
               We develop and deliver innovative, clinically backed Ayurvedic solutions that effectively manage diabetes while promoting holistic well-being. By combining timeless natural wisdom with rigorous scientific validation, we create safer, faster-acting alternatives that empower patients on their journey to better health and vitality
             </h1>
           </div>
-          <div className="flex hover:underline text-[#588157] font-bold items-center">
+          <div className="flex hover:underline text-[#588157] font-bold items-center text-2xl">
             <Link to="/innovation">Explore our Innovations</Link>
           </div>
         </div>
@@ -126,7 +131,7 @@ const Home = () => {
           </motion.p>
           <motion.div variants={fadeInFromBottom}>
             <Link
-              to="/contact"
+              to="https://www.linkedin.com/in/priyanshu-chauhan-963981212/"
               className="inline-block bg-[#dec493] text-[#216041] font-bold py-3 px-8 rounded-full text-lg shadow-lg hover:bg-[#F4F1DE] hover:text-[#3A5A40] transition-transform transform hover:scale-105"
             >
               Get in Touch

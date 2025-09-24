@@ -1,32 +1,33 @@
 import React from "react";
 import { motion } from "framer-motion";
 import AnimatedCard from "../components/AnimatedCard";
-import Marquee from 'react-fast-marquee';
+import Marquee from "react-fast-marquee";
 import Blogs from "../components/Blogs";
+import { Helmet } from '@dr.pogodin/react-helmet';
 // Animation variants (add these!)
-const validation=[
+const validation = [
   {
-    img:"/assets/16.png"
+    img: "/assets/16.png",
   },
   {
-    img:"/assets/17.png"
+    img: "/assets/17.png",
   },
   {
-    img:"/assets/18.png"
+    img: "/assets/18.png",
   },
   {
-    img:"/assets/19.png"
+    img: "/assets/19.png",
   },
   {
-    img:"/assets/21.png"
+    img: "/assets/21.png",
   },
   {
-    img:"/assets/22.png"
+    img: "/assets/22.png",
   },
   {
-    img:"/assets/23.png"
-  }
-]
+    img: "/assets/23.png",
+  },
+];
 const containerVariants = {
   hidden: {},
   visible: {
@@ -60,8 +61,7 @@ const ingredients = [
   },
   {
     name: "Vijaysar",
-    benefit:
-      "Provides metabolic protection",
+    benefit: "Provides metabolic protection",
     img: "/assets/vijaysar.jpeg",
   },
   {
@@ -71,14 +71,12 @@ const ingredients = [
   },
   {
     name: "Turmeric & Amla",
-    benefit:
-      "Boost berberine bioavailability",
+    benefit: "Boost berberine bioavailability",
     img: "/assets/tna.jpeg",
   },
   {
     name: "Gudmar",
-    benefit:
-      "Regulates sugar cravings 🍫",
+    benefit: "Regulates sugar cravings 🍫",
     img: "/assets/gurmar.jpeg",
   },
 ];
@@ -86,6 +84,10 @@ const ingredients = [
 const Innovation = () => {
   return (
     <section className="bg-[#dec493] text-gray-800 py-16">
+      <Helmet>
+        <title>Know our Innovations</title>
+        <meta name="description" content="Killing Diabeties Safely" />
+      </Helmet>
       {/* Header */}
       <motion.div
         initial={{ opacity: 0, y: -30 }}
@@ -217,46 +219,58 @@ const Innovation = () => {
         <h3 className="text-3xl font-bold text-[#216041] my-10">
           What makes it Different
         </h3>
-        <div className="flex gap-6">
+        <div className="flex flex-col lg:flex-row gap-6">
           <motion.div
             variants={scaleIn}
-            className="flex w-1/2 bg-[#dec493] p-8 rounded-lg shadow-md border-l-4 border-[#588157] justify-around"
+            className="flex w-full lg:w-1/2 bg-[#dec493] p-6 sm:p-8 rounded-lg shadow-md border-l-4 border-[#588157] items-center gap-4"
           >
             <img
               src="/assets/Berberine.jpeg"
               alt="Berberine"
-              className="w-1/5 object-cover mb-4 rounded-md"
+              className="w-1/4 sm:w-1/5 object-cover rounded-md"
             />
             <div>
-              <h3 className="text-xl font-bold text-[#3A5A40] font-['Source_Serif_4'] mb-2">
+              <h3 className="text-lg sm:text-xl font-bold text-[#3A5A40] font-['Source_Serif_4'] mb-2">
                 Berberine (HCL)
               </h3>
-              <p>Clinically proven efficacy, comparable to Metformin</p>
-              <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC2410097/" target="_blank" className="text-blue text-lg hover:text-xl">Refer Here →</a>
+              <p className="text-sm sm:text-base mb-2">
+                Clinically proven efficacy, comparable to Metformin
+              </p>
+              <a
+                href="https://pmc.ncbi.nlm.nih.gov/articles/PMC2410097/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-600 text-base hover:text-lg transition-all"
+              >
+                Refer Here →
+              </a>
             </div>
           </motion.div>
           <motion.div
             variants={scaleIn}
-            className="flex w-1/2 bg-[#dec493] p-8 rounded-lg shadow-md border-l-4 border-[#A3B18A]"
+            className="flex w-full lg:w-1/2 bg-[#dec493] p-6 sm:p-8 rounded-lg shadow-md border-l-4 border-[#A3B18A] items-center gap-4"
           >
             <img
               src="/assets/ayurveda.png"
               alt="Ayurveda"
-              className="w-1/5 object-cover mb-4 rounded-md"
+              className="w-1/4 sm:w-1/5 object-cover rounded-md"
             />
             <div>
-              <h3 className="text-xl font-bold text-[#3A5A40] font-['Source_Serif_4'] mb-2">
+              <h3 className="text-lg sm:text-xl font-bold text-[#3A5A40] font-['Source_Serif_4'] mb-2">
                 Ayurvedic Synergy
               </h3>
-              <p>
-                Supportive herbs contributes a unique function, making Glycomics the
-                most effective berberine-based anti-diabetic formulation
+              <p className="text-sm sm:text-base">
+                Supportive herbs contribute unique functions, making Glycomics
+                the most effective berberine-based anti-diabetic formulation
               </p>
             </div>
           </motion.div>
         </div>
+
         <div>
-          <h1 className="text-3xl mx-8 text-[#216041] text-start mt-12 font-bold">Herbal Contributions</h1>
+          <h1 className="text-3xl mx-8 text-[#216041] text-start mt-12 font-bold">
+            Herbal Contributions
+          </h1>
           <div className="flex flex-wrap gap-8 mx-auto p-10 bg-white">
             {ingredients.map((item, index) => (
               <AnimatedCard item={item} index={index} key={index} />
@@ -267,15 +281,22 @@ const Innovation = () => {
       {/* Ingredient Highlights */}
 
       {/* Differentiators */}
-      <div className="bg-white p-6"> 
-        <h1 className="mx-8 mb-6 text-3xl text-[#216041] text-start font-bold">Product Certifications</h1>
+      <div className="bg-white p-6">
+        <h1 className="mx-8 mb-6 text-3xl text-[#216041] text-start font-bold">
+          Product Certifications
+        </h1>
         <Marquee gradient={false} speed={80} className="text-white py-4">
-          {validation.map((item, index)=>(
-            <img src={item.img} alt="Validation logos" className="h-40 mx-10" key={index}/>
+          {validation.map((item, index) => (
+            <img
+              src={item.img}
+              alt="Validation logos"
+              className="h-40 mx-10"
+              key={index}
+            />
           ))}
         </Marquee>
       </div>
-      <Blogs/>
+      <Blogs />
     </section>
   );
 };
