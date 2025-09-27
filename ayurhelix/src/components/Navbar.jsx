@@ -59,7 +59,7 @@ const Navbar = () => {
           </button>
 
           {/* Desktop Nav Links */}
-          <div className="hidden lg:flex items-center space-x-8">
+          <div className="hidden lg:flex items-center space-x-8 bg-[#538366] py-4 px-6 mx-8 rounded-3xl">
             {tabs.map((tab, idx) => (
               <NavLink
                 key={idx}

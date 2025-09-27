@@ -2,14 +2,14 @@ import React, { useState, useRef, useLayoutEffect } from 'react';
 
 // --- Data for the roadmap (images removed for a compact card design) ---
 const roadmapData = [
-  { step: "Nov 2023 - Dec 2023", title: "Firm Formation", subtitle: "Beyond Bound", img:"/assets/FF.jpeg" },
-  { step: "Dec 2023 - May 2024", title: "R&D Kickoff", subtitle: "Journey Begins", img:"/assets/rnd.png"},
-  { step: "June 2024 - Sept 2024", title: "Formulation Development", subtitle: "Something Brewing", img:"/assets/ct.jpeg" },
-  { step: "Oct 2024 – Jan 2025", title: "Final Formulation Stage", subtitle: "Medical Trials", img:"/assets/fs.png" },
-  { step: "Feb-2025", title: "IP process", subtitle: "Formulation Safety", img:"/assets/fs.png" },
-  { step: "Mar 2025 – May 2025", title: "Product Manufacturing and Certification", subtitle: "", img:"/assets/fs.png" },
+  { step: "Nov 2023 - Dec 2023", title: "Firm Formation", subtitle: "Beyond Bound", img:"/assets/1.png" },
+  { step: "Dec 2023 - May 2024", title: "R&D Kickoff", subtitle: "Journey Begins", img:"/assets/2.png"},
+  { step: "June 2024 - Sept 2024", title: "Formulation Development", subtitle: "Something Brewing", img:"/assets/3.png" },
+  { step: "Oct 2024 – Jan 2025", title: "Final Formulation Stage", subtitle: "Medical Trials", img:"/assets/4.png" },
+  { step: "Feb-2025", title: "IP process", subtitle: "Formulation Safety", img:"/assets/5.png" },
+  { step: "Mar 2025 – May 2025", title: "Product Manufacturing and Certification", subtitle: "", img:"/assets/6.png" },
   { step: "June 2025", title: "Riidl Partnership", subtitle: "", img:"/assets/riddl.png" },
-  { step: "Aug 2025", title: "Official Incorporation", subtitle: "Registration", img:"/assets/logo.png" },
+  { step: "Aug 2025", title: "Official Incorporation", subtitle: "Registration", img:"/assets/8.png" },
   // Add more milestones if needed
 ];
 

@@ -1,18 +1,18 @@
 import React from 'react';
-
+import HoverCard from '../components/HoverCard'
 // --- Data for the myths and facts ---
 const mythFactData = [
   {
     myth: "Ayurvedic medicines are slow and cannot replace allopathy",
-    fact: "Glycomics delivers fast, clinically proven results—matching allopathy, with no side effects, and can safely replace Metformin 500 mg"
+    fact: "Glycomics: fast, proven, safe alternative to Metformin 500 mg"
   },
   {
     myth: "Ayurveda lacks scientific validation.",
-    fact: "Our solution is clinically proven and IPR-protected, combining the wisdom of Ayurveda with modern science."
+    fact: "Clinically proven & IPR-protected, uniting Ayurveda with modern science"
   },
   {
     myth: "Ayurvedic products are just supplements.",
-    fact: "Beyond Bound is building therapeutic medicines, not just supplements—designed to address the real medical needs of diabetics."
+    fact: "Beyond Bound creates therapeutic medicines to meet real diabetic needs"
   }
 ];
 
@@ -37,37 +37,44 @@ export default function MythsFacts() {
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold text-[#395c37] sm:text-4xl">
-            Myths vs. Facts
+            Myths vs Facts
           </h2>
           <p className="mt-4 text-lg text-slate-600">
             Separating misconceptions from the truth about our innovative Ayurvedic solutions.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-1 gap-8">
+        <div className="hidden md:grid grid-cols-1 md:grid-cols-3 gap-8">
           {mythFactData.map((item, index) => (
             <div key={index} className="md:flex space-y-6">
               {/* Myth Card */}
-              <div className="bg-white p-6 rounded-lg shadow-md border-l-4 border-red-400 transform hover:-translate-y-1 transition-transform duration-300 md:w-1/2">
                 <div className="flex items-start space-x-4">
-                  <MythIcon />
-                  <div>
-                    <h3 className="text-lg font-bold text-slate-800">Myth</h3>
-                    <p className="mt-1 text-slate-600">{item.myth}</p>
-                  </div>
+                  <HoverCard frontContent={"Myth"} backContent={item.myth}/>
                 </div>
-              </div>
-
+            </div>
+          ))}
+          {mythFactData.map((item, index) => (
+            <div key={index} className="md:flex space-y-6">
               {/* Fact Card */}
-              <div className="bg-white p-6 rounded-lg shadow-md border-l-4 border-green-500 transform hover:-translate-y-1 transition-transform duration-300 md:w-1/2 ml-5">
                 <div className="flex items-start space-x-4">
-                  <FactIcon />
-                  <div>
-                    <h3 className="text-lg font-bold text-slate-800">Fact</h3>
-                    <p className="mt-1 text-slate-600">{item.fact}</p>
-                  </div>
+                  <HoverCard frontContent={"Fact"} backContent={item.fact}/>
                 </div>
-              </div>
+            </div>
+          ))}
+        </div>
+        <div className="md:hidden grid grid-cols-1 md:grid-cols-3 gap-8">
+          {mythFactData.map((item, index) => (
+            <div key={index} className="flex space-y-6">
+              {/* Myth Card */}
+                <div className="flex items-start space-x-4">
+                  <HoverCard frontContent={"Myth"} backContent={item.myth}/>
+                </div>
+                <div key={index} className="md:flex space-y-6">
+              {/* Fact Card */}
+                <div className="flex items-start space-x-4 ml-2">
+                  <HoverCard frontContent={"Fact"} backContent={item.fact}/>
+                </div>
+            </div>
             </div>
           ))}
         </div>

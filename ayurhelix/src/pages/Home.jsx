@@ -1,3 +1,4 @@
+import {useState, useEffect} from 'react'
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import Timeline from "../components/Timeline";
@@ -46,6 +47,13 @@ const HERO_IMAGE =
   "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80"; // Replace with your own image
 
 const Home = () => {
+  const [num, setNum]=useState(100015120.0)
+  useEffect(()=>{
+    const interval=setInterval(()=>{
+      setNum((prev)=>prev+0.2);
+    },1000)
+    return ()=>clearInterval(interval);
+  })
   return (
     <div className="bg-white">
       <Helmet>
@@ -64,8 +72,14 @@ const Home = () => {
         <video src="/assets/test.mp4" style={{zIndex:0}} controls autoplay muted loop className="absolute h-100 w-full">
           Your browser does not support the video tag.
         </video>
-        <div className="z-2 relative bg-white/70 p-4 shadow-md rounded-xl md:w-1/5 w-full mx-4 justify-center mt-20">
-          <h1 className="text-3xl text-black font-bold">Say goodbye to harmful side effects from diabetes medications</h1>
+        <div className='flex justify-between'>
+          <div className="z-2 relative bg-white/20 p-4 shadow-md rounded-xl md:w-1/5 w-full mx-4 justify-center mt-20">
+          <h1 className="text-xl md:text-3xl text-black font-bold">Say goodbye to harmful side effects from diabetes medications</h1>
+        </div>
+        <div className="z-4 relative bg-white/20 p-4 shadow-md rounded-xl md:w-1/5 w-full mx-4 justify-center right-0 mt-40">
+          <h1 className='mt-2 text-black'>INDIA</h1>
+          <h1 className="mb-4 text-xl md:text-3xl text-black font-bold">Diabeties Paitients {num.toFixed(2)}</h1>
+        </div>
         </div>
       </motion.section>
       {/* Differentiators */}
@@ -164,7 +178,6 @@ const Home = () => {
       {/* Timeline Section */}
       <Timeline />
       <Risks />
-      {/* Call-to-Action Section */}
     </div>
   );
 };
