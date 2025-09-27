@@ -7,22 +7,22 @@ const drugClasses = [
       class: "Biguanides",
       examples: ["Metformin"],
       pancreatitisRisk: "Low Risk",
-      kidneyImpact: "CKD me risk (lactic acidosis)",
+      kidneyImpact: "High Risk",
       heartRisk: "Safe",
       reference: "https://pubmed.ncbi.nlm.nih.gov/26880410/"
     },
     {
       class: "DPP-4 Inhibitors",
       examples: ["Sitagliptin", "Linagliptin", "Saxagliptin"],
-      pancreatitisRisk: "Moderate Risk",
+      pancreatitisRisk: "High Risk",
       kidneyImpact: "Safer for kidneys",
-      heartRisk: "Heart failure risk (Saxagliptin)",
+      heartRisk: "High Risk",
       reference: "https://www.nejm.org/doi/full/10.1056/NEJMoa1307684"
     },
     {
       class: "SGLT2 Inhibitors",
       examples: ["Canagliflozin", "Dapagliflozin", "Empagliflozin"],
-      pancreatitisRisk: "Moderate Risk",
+      pancreatitisRisk: "High Risk",
       kidneyImpact: "Kidney protective",
       heartRisk: "Heart protective",
       reference: "https://www.nejm.org/doi/full/10.1056/NEJMoa1811744"
@@ -32,14 +32,14 @@ const drugClasses = [
       examples: ["Glimepiride", "Glibenclamide", "Gliclazide"],
       pancreatitisRisk: "No Risk",
       kidneyImpact: "No Direct Impact",
-      heartRisk: "Heart Attack & Hypoglycemia Risk",
+      heartRisk: "High Risk",
       reference: "https://care.diabetesjournals.org/content/40/5/706"
     },
     {
       class: "Thiazolidinediones (TZD)",
       examples: ["Pioglitazone", "Rosiglitazone"],
       pancreatitisRisk: "No Risk",
-      kidneyImpact: "Fluid retention (CKD risk)",
+      kidneyImpact: "Moderate Risk",
       heartRisk: "High Heart Failure Risk",
       reference: "https://www.sciencedirect.com/science/article/abs/pii/S0168822718302086"
     },
@@ -56,7 +56,7 @@ const drugClasses = [
       examples: ["Regular Insulin", "Basal Insulin (Glargine, Detemir)"],
       pancreatitisRisk: "No Risk",
       kidneyImpact: "No Direct Impact",
-      heartRisk: "Hypoglycemia Risk",
+      heartRisk: "High Risk",
       reference: "https://www.bmj.com/content/356/bmj.i4897"
     }
 ];

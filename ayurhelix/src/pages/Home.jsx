@@ -78,7 +78,7 @@ const Home = () => {
             <img
               src={item.img}
               alt="Validation logos"
-              className="h-20 mx-20"
+              className="h-20 lg:mx-20 mx-10"
               key={index}
             />
           ))}
@@ -90,7 +90,7 @@ const Home = () => {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
         viewport={{ once: true }}
-        className="relative flex flex-col lg:flex-row justify-around items-center bg-white/80 backdrop-blur-md shadow-sm p-10 max-w-full mx-auto overflow-hidden"
+        className="relative flex flex-col lg:flex-row justify-around items-center bg-white/80 backdrop-blur-md shadow-sm p-10 max-w-full overflow-hidden"
       >
         {/* Left Content */}
 
@@ -106,12 +106,12 @@ const Home = () => {
           />
         </div>
         {/* Right Content - Product Image */}
-        <div className="mx-10 max-w-md">
+        <div className="max-w-md">
           <motion.h3
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-4xl font-bold bg-gradient-to-r from-emerald-500 to-blue-600 bg-clip-text text-[#216041] mb-6"
+            className="text-3xl font-bold bg-gradient-to-r from-emerald-500 to-blue-600 bg-clip-text text-[#216041] mb-6"
           >
             Introducing Glycomics
           </motion.h3>
@@ -153,7 +153,7 @@ const Home = () => {
               Twice a day before meals
             </span>
           </p>
-          <motion.div variants={fadeInFromBottom}>
+          <motion.div className="text-center" variants={fadeInFromBottom}>
             <Link
               to="/innovation"
               className="w-full lg:w-auto inline-block bg-[#395c37] text-white font-bold py-3 px-8 rounded-full text-lg shadow-lg hover:bg-[#F4F1DE] hover:text-[#3A5A40] transition-transform transform hover:scale-105 my-6 item-center"
@@ -163,11 +163,11 @@ const Home = () => {
           </motion.div>
         </div>
       </motion.div>
+      <MythFacts />
       {/* Timeline Section */}
       <Timeline />
       <Risks />
       {/* Call-to-Action Section */}
-      <MythFacts />
     </div>
   );
 };

@@ -50,9 +50,9 @@ export default function MythsFacts() {
 
         <div className="grid grid-cols-1 md:grid-cols-1 gap-8">
           {mythFactData.map((item, index) => (
-            <div key={index} className="flex space-y-6">
+            <div key={index} className="md:flex space-y-6">
               {/* Myth Card */}
-              <div className="bg-white p-6 rounded-lg shadow-md border-l-4 border-red-400 transform hover:-translate-y-1 transition-transform duration-300 w-1/2">
+              <div className="bg-white p-6 rounded-lg shadow-md border-l-4 border-red-400 transform hover:-translate-y-1 transition-transform duration-300 md:w-1/2">
                 <div className="flex items-start space-x-4">
                   <MythIcon />
                   <div>
@@ -63,7 +63,7 @@ export default function MythsFacts() {
               </div>
 
               {/* Fact Card */}
-              <div className="bg-white p-6 rounded-lg shadow-md border-l-4 border-green-500 transform hover:-translate-y-1 transition-transform duration-300 w-1/2 ml-5">
+              <div className="bg-white p-6 rounded-lg shadow-md border-l-4 border-green-500 transform hover:-translate-y-1 transition-transform duration-300 md:w-1/2 ml-5">
                 <div className="flex items-start space-x-4">
                   <FactIcon />
                   <div>
