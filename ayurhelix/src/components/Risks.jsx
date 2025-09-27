@@ -51,14 +51,6 @@ const drugClasses = [
       heartRisk: "Heart Protective",
       reference: "https://onlinelibrary.wiley.com/doi/full/10.1002/dmrr.2835"
     },
-    {
-      class: "Insulin Therapy",
-      examples: ["Regular Insulin", "Basal Insulin (Glargine, Detemir)"],
-      pancreatitisRisk: "No Risk",
-      kidneyImpact: "No Direct Impact",
-      heartRisk: "High Risk",
-      reference: "https://www.bmj.com/content/356/bmj.i4897"
-    }
 ];
 
 // --- Helper function to determine color based on risk level ---

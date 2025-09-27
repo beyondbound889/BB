@@ -2,13 +2,14 @@ import React, { useState, useRef, useLayoutEffect } from 'react';
 
 // --- Data for the roadmap (images removed for a compact card design) ---
 const roadmapData = [
-  { step: "Nov 2023 - Dec 2023", title: "Firm Formation", subtitle: "Beyond Bound" },
-  { step: "Dec 2023 - May 2024", title: "R&D Kickoff", subtitle: "Journey Begins" },
-  { step: "June 2024 - Sept 2024", title: "Formulation Development", subtitle: "Something Brewing" },
-  { step: "Oct 2024 – April 2025", title: "Final Formulation Stage", subtitle: "Medical Trials" },
-  { step: "May 2025 - June 2025", title: "Strategic Partnership", subtitle: "Pharma Network" },
-  { step: "June 2025 - Aug 2025", title: "Product Certification", subtitle: "Market Ready" },
-  { step: "Aug 2025", title: "Official Incorporation", subtitle: "Registration" },
+  { step: "Nov 2023 - Dec 2023", title: "Firm Formation", subtitle: "Beyond Bound", img:"/assets/FF.jpeg" },
+  { step: "Dec 2023 - May 2024", title: "R&D Kickoff", subtitle: "Journey Begins", img:"/assets/rnd.png"},
+  { step: "June 2024 - Sept 2024", title: "Formulation Development", subtitle: "Something Brewing", img:"/assets/ct.jpeg" },
+  { step: "Oct 2024 – Jan 2025", title: "Final Formulation Stage", subtitle: "Medical Trials", img:"/assets/fs.png" },
+  { step: "Feb-2025", title: "IP process", subtitle: "Formulation Safety", img:"/assets/fs.png" },
+  { step: "Mar 2025 – May 2025", title: "Product Manufacturing and Certification", subtitle: "", img:"/assets/fs.png" },
+  { step: "June 2025", title: "Riidl Partnership", subtitle: "", img:"/assets/riddl.png" },
+  { step: "Aug 2025", title: "Official Incorporation", subtitle: "Registration", img:"/assets/logo.png" },
   // Add more milestones if needed
 ];
 
@@ -79,6 +80,8 @@ const DesktopRoadmap = () => {
               <div className={`absolute left-1/2 w-0.5 bg-slate-300
                                 ${index % 2 === 0 ? 'h-12 top-full' : 'h-12 bottom-full'}`}
               />
+              <img src={milestone.img} className={`absolute w-20 bg-slate-300 left-1/3
+                                ${index % 2 === 0 ? 'h-12 top-full mt-10' : 'h-12 bottom-full mb-10'}`}/>
               <div className="bg-white rounded-lg shadow-xl h-full p-4 flex flex-col justify-center border-t-4 border-sky-500">
                 <p className="text-xs font-semibold text-slate-500">{milestone.step}</p>
                 <h3 className="text-base font-bold text-slate-800">{milestone.title}</h3>

@@ -3,16 +3,12 @@ import React from 'react';
 // --- Data for the myths and facts ---
 const mythFactData = [
   {
-    myth: "Ayurvedic medicines are always slow to act.",
-    fact: "With Glycomics innovation, our formulations deliver fast, clinically validated results, comparable to allopathy—without harmful side effects."
+    myth: "Ayurvedic medicines are slow and cannot replace allopathy",
+    fact: "Glycomics delivers fast, clinically proven results—matching allopathy, with no side effects, and can safely replace Metformin 500 mg"
   },
   {
     myth: "Ayurveda lacks scientific validation.",
     fact: "Our solution is clinically proven and IPR-protected, combining the wisdom of Ayurveda with modern science."
-  },
-  {
-    myth: "Natural medicines can’t replace allopathic drugs.",
-    fact: "Our formulation shows allopathy-level efficacy and potential to replace Metformin 500 mg safely."
   },
   {
     myth: "Ayurvedic products are just supplements.",

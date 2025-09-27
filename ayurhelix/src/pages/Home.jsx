@@ -8,25 +8,22 @@ import { Helmet } from "@dr.pogodin/react-helmet";
 // Animation variants
 const validation = [
   {
-    img: "/assets/16.png",
+    img: "/assets/Ayush.svg",
   },
   {
-    img: "/assets/17.png",
+    img: "/assets/gmo.png",
   },
   {
-    img: "/assets/18.png",
+    img: "/assets/Haccp.svg",
   },
   {
-    img: "/assets/19.png",
+    img: "/assets/ISO.svg",
   },
   {
-    img: "/assets/21.png",
+    img: "/assets/nap.svg",
   },
   {
-    img: "/assets/22.png",
-  },
-  {
-    img: "/assets/23.png",
+    img: "/assets/WHO.svg",
   },
 ];
 
@@ -78,7 +75,7 @@ const Home = () => {
             <img
               src={item.img}
               alt="Validation logos"
-              className="h-20 lg:mx-20 mx-10"
+              className="h-40 lg:mx-20 mx-10"
               key={index}
             />
           ))}
@@ -90,19 +87,19 @@ const Home = () => {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
         viewport={{ once: true }}
-        className="relative flex flex-col lg:flex-row justify-around items-center bg-white/80 backdrop-blur-md shadow-sm p-10 max-w-full overflow-hidden"
+        className="relative flex flex-col lg:flex-row justify-around items-center bg-white/80 backdrop-blur-md p-10 max-w-full overflow-hidden"
       >
         {/* Left Content */}
 
         <div className="relative">
           {/* Glowing Background */}
-          <div className="absolute -inset-10 bg-gradient-to-tr from-emerald-300/30 to-blue-400/20 rounded-full blur-3xl animate-pulse" />
+          <div className="absolute bg-white" />
           <motion.img
             src="/assets/Product.png"
             alt="Glycomics Product"
             whileHover={{ scale: 1.08, rotate: 2 }}
             transition={{ type: "spring", stiffness: 200 }}
-            className="relative z-10 mx-auto h-140 drop-shadow-2xl"
+            className="relative z-10 mx-auto w-full h-140 drop-shadow-2xl"
           />
         </div>
         {/* Right Content - Product Image */}
@@ -111,7 +108,7 @@ const Home = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-3xl font-bold bg-gradient-to-r from-emerald-500 to-blue-600 bg-clip-text text-[#216041] mb-6"
+            className="text-3xl font-bold bg-gradient-to-r from-yellow-500 to-green-600 bg-clip-text text-[#216041] mb-6"
           >
             Introducing Glycomics
           </motion.h3>
