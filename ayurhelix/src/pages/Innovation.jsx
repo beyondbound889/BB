@@ -1,33 +1,9 @@
 import React from "react";
 import { motion } from "framer-motion";
 import AnimatedCard from "../components/AnimatedCard";
-import Marquee from "react-fast-marquee";
 import Blogs from "../components/Blogs";
 import { Helmet } from '@dr.pogodin/react-helmet';
 // Animation variants (add these!)
-const validation = [
-  {
-    img: "/assets/16.png",
-  },
-  {
-    img: "/assets/17.png",
-  },
-  {
-    img: "/assets/18.png",
-  },
-  {
-    img: "/assets/19.png",
-  },
-  {
-    img: "/assets/21.png",
-  },
-  {
-    img: "/assets/22.png",
-  },
-  {
-    img: "/assets/23.png",
-  },
-];
 const containerVariants = {
   hidden: {},
   visible: {
@@ -279,23 +255,6 @@ const Innovation = () => {
         </div>
       </div>
       {/* Ingredient Highlights */}
-
-      {/* Differentiators */}
-      <div className="bg-white p-6">
-        <h1 className="mx-8 mb-6 text-3xl text-[#216041] text-start font-bold">
-          Product Certifications
-        </h1>
-        <Marquee gradient={false} speed={80} className="text-white py-4">
-          {validation.map((item, index) => (
-            <img
-              src={item.img}
-              alt="Validation logos"
-              className="h-40 mx-10"
-              key={index}
-            />
-          ))}
-        </Marquee>
-      </div>
       <Blogs />
     </section>
   );

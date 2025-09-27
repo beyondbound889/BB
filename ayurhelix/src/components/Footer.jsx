@@ -4,7 +4,7 @@ import { FaSquareXTwitter } from "react-icons/fa6";
 import { FaLinkedin } from "react-icons/fa";
 const Footer = () => {
   return (
-    <footer className="bg-[#1E2F23] text-[#A3B18A]">
+    <footer className="bg-[#395c37] text-[#A3B18A]">
       <div className="flex flex-col md:flex-row justify-between items-start md:items-center px-6 md:px-12 py-8 md:py-12 space-y-8 md:space-y-0">
         <div className="container p-4 lg:w-1/3 flex flex-col items-center justify-center text-center">
           <h1 className="text-xl font-bold text-white mb-5">Office Location</h1>

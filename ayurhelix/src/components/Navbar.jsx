@@ -1,6 +1,12 @@
-import { NavLink } from 'react-router-dom';
-import { useState } from 'react';
-import Chat from './Chat';
+import { NavLink } from "react-router-dom";
+import { useState } from "react";
+import Chat from "./Chat";
+
+const tabs = [
+  { name: "Home", link: "/" },
+  { name: "Innovation", link: "/innovation" },
+  { name: "About", link: "/about" },
+];
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -8,88 +14,88 @@ const Navbar = () => {
   return (
     <>
       {/* Navbar Header */}
-      <header className="bg-[#dec493] sticky top-0 z-50 shadow-lg">
-        <nav className="container mx-auto px-6 py-4 flex justify-between items-center">
-          {/* Logo */}
-          <NavLink to="/" className="text-2xl font-bold text-[#216041] font-['Source_Serif_4']">
-            Beyond Bound<sup>®</sup>
+      <header className="bg-[#395c37] sticky top-0 z-50 shadow-xl">
+        <nav className="container mx-auto px-6 py-3 flex justify-between items-center">
+          {/* Logo Section */}
+          <NavLink to="/" className="flex items-center space-x-3">
+            <img
+              src="/assets/logo.png"
+              alt="Ayurhelix Logo"
+              className="w-16 h-16 rounded-xl shadow-lg"
+            />
+            <div>
+              <h1 className="text-2xl font-bold text-[#dec493] font-['Source_Serif_4']">
+                Beyond Bound<sup>®</sup>
+              </h1>
+              <p className="text-sm text-[#dec493] opacity-70 mt-1">Heal with Nature</p>
+            </div>
           </NavLink>
 
-          {/* Hamburger Icon */}
+          {/* Hamburger Icon for Mobile */}
           <button
-            className="md:hidden text-[#216041] focus:outline-none"
+            className="lg:hidden text-[#dec493] focus:outline-none"
             onClick={() => setIsOpen(!isOpen)}
+            aria-label="Toggle menu"
           >
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              {isOpen ? (
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-              ) : (
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-              )}
-            </svg>
+            {isOpen ? (
+              <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
+            ) : (
+              <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+              </svg>
+            )}
           </button>
 
           {/* Desktop Nav Links */}
-          <div className="hidden md:flex items-center space-x-8 text-xl">
-            <NavLink
-              to="/"
-              className={({ isActive }) =>
-                isActive ? "text-[#216041] font-bold" : "text-black transition opacity-80"
-              }
-            >
-              Home
-            </NavLink>
-            <NavLink
-              to="/innovation"
-              className={({ isActive }) =>
-                isActive ? "text-[#216041] font-bold" : "text-black transition opacity-80"
-              }
-            >
-              Our Innovation
-            </NavLink>
-            <NavLink
-              to="/about"
-              className={({ isActive }) =>
-                isActive ? "text-[#216041] font-bold" : "text-black transition opacity-80"
-              }
-            >
-              About Us
-            </NavLink>
+          <div className="hidden lg:flex items-center space-x-8">
+            {tabs.map((tab, idx) => (
+              <NavLink
+                key={idx}
+                to={tab.link}
+                className={({ isActive }) =>
+                  isActive
+                    ? "text-[#dec493] font-semibold border-b-2 border-[#dec493] pb-1 transition text-lg"
+                    : "text-white opacity-80 hover:text-[#dec493] transition text-lg"
+                }
+              >
+                {tab.name}
+              </NavLink>
+            ))}
           </div>
         </nav>
+        {/* Floating Chat Component */}
         <Chat />
       </header>
 
-      {/* Mobile Menu Below Navbar */}
+      {/* Mobile Menu */}
       {isOpen && (
-        <div className="bg-[#dec493] md:hidden flex flex-col items-start px-6 py-4 space-y-4 text-xl shadow-md">
-          <NavLink
-            to="/"
-            className={({ isActive }) =>
-              isActive ? "text-[#216041] font-semibold" : "text-black transition opacity-50"
-            }
-            onClick={() => setIsOpen(false)}
-          >
-            Home
-          </NavLink>
-          <NavLink
-            to="/innovation"
-            className={({ isActive }) =>
-              isActive ? "text-[#216041] font-semibold" : "text-black transition opacity-50"
-            }
-            onClick={() => setIsOpen(false)}
-          >
-            Our Innovation
-          </NavLink>
-          <NavLink
-            to="/about"
-            className={({ isActive }) =>
-              isActive ? "text-[#216041] font-semibold" : "text-black transition opacity-50"
-            }
-            onClick={() => setIsOpen(false)}
-          >
-            About Us
-          </NavLink>
+        <div className="lg:hidden bg-[#dec493] shadow-md rounded-b-xl flex flex-col items-start px-6 py-5 space-y-4">
+          {tabs.map((tab, idx) => (
+            <NavLink
+              key={idx}
+              to={tab.link}
+              onClick={() => setIsOpen(false)}
+              className={({ isActive }) =>
+                isActive
+                  ? "text-[#216041] font-semibold border-l-4 border-[#216041] pl-2 text-3xl"
+                  : "text-black opacity-70 hover:text-[#216041] transition pl-2 text-3xl"
+              }
+            >
+              {tab.name}
+            </NavLink>
+          ))}
         </div>
       )}
     </>
