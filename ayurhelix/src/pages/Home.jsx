@@ -80,7 +80,7 @@ const Home = () => {
         </video>
 
         {/* Overlay content container */}
-        <div className="relative z-20 flex flex-col md:flex-row justify-between items-start md:items-center gap-6 p-6 md:p-12 max-w-screen-xl mx-auto">
+        <div className="relative z-10 flex flex-col md:flex-row justify-between items-start md:items-center gap-6 p-6 md:p-12 max-w-screen-xl mx-auto">
           {/* Left Info Box */}
           <div className="bg-white/20 backdrop-blur-sm p-6 rounded-xl shadow-md md:w-1/3 w-1/2 text-black">
             <h1 className="font-bold text-sm md:text-3xl">
@@ -144,43 +144,13 @@ const Home = () => {
           >
             Introducing Glycomics
           </motion.h3>
-          <motion.ul
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            variants={{
-              hidden: { opacity: 0 },
-              visible: {
-                opacity: 1,
-                transition: { staggerChildren: 0.15 },
-              },
-            }}
-            className="hidden md:block list-disc list-inside text-gray-700 space-y-3 text-lg"
-          >
-            {[
-              "As effective and fast as allopathy",
-              "As safe and natural as Ayurveda",
-              "Doctor-formulated, evidence-backed",
-              "No known side effects",
-            ].map((item, i) => (
-              <motion.li
-                key={i}
-                variants={{
-                  hidden: { opacity: 0, x: -20 },
-                  visible: { opacity: 1, x: 0 },
-                }}
-              >
-                {item}
-              </motion.li>
-            ))}
-          </motion.ul>
-          <p className="md:hidden text-md text-gray-500 italic">
+          <p className="text-md md:text-2xl text-gray-500 italic">
             Experience the fast-acting power of science with the safety of Ayurveda. Glycomics is your clinically-proven, herbal solution to manage sugar levels without compromise. Heal with nature, backed by science
           </p>
           <motion.div className="text-center" variants={fadeInFromBottom}>
             <Link
               to="/innovation"
-              className="w-3/4 md:w-full lg:w-auto inline-block bg-[#395c37] text-white font-bold py-0.5 md:py-3 px-3 md:px-8 rounded-full text-sm md:text-lg shadow-lg hover:bg-[#F4F1DE] hover:text-[#3A5A40] transition-transform transform hover:scale-105 my-2 item-center"
+              className="w-3/4 md:w-full lg:w-auto inline-block bg-[#395c37] text-white font-bold py-0.5 md:py-3 px-3 md:px-8 rounded-full text-sm md:text-lg shadow-lg hover:bg-[#F4F1DE] hover:text-[#3A5A40] transition-transform transform hover:scale-105 my-2 md:my-10 item-center"
             >
               Know More
             </Link>

@@ -82,7 +82,7 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="lg:hidden bg-[#dec493] shadow-md rounded-b-xl flex flex-col items-start px-6 py-5 space-y-4">
+        <div className="z-20 fixed right-0 lg:hidden bg-[#dec493] shadow-xl rounded-b-xl flex flex-col items-start px-6 py-5 space-y-4 backdrop-blur-sm" >
           {tabs.map((tab, idx) => (
             <NavLink
               key={idx}
@@ -90,8 +90,8 @@ const Navbar = () => {
               onClick={() => setIsOpen(false)}
               className={({ isActive }) =>
                 isActive
-                  ? "text-[#216041] font-semibold border-l-4 border-[#216041] pl-2 text-xl"
-                  : "text-black opacity-70 hover:text-[#216041] transition pl-2 text-xl"
+                  ? "text-[#216041] font-semibold border-l-4 border-[#216041] pl-2 text-md"
+                  : "text-black opacity-70 hover:text-[#216041] transition pl-2 text-md"
               }
             >
               {tab.name}
