@@ -72,7 +72,7 @@ const DesktopRoadmap = () => {
             <div
               key={index}
               ref={el => cardRefs.current[index] = el}
-              className={`flex-shrink-0 w-52 h-36 relative transition-transform duration-200 ease-out snap-center
+              className={`flex-shrink-0 w-30 md:w-52 h-36 relative transition-transform duration-200 ease-out snap-center
                           ${index % 2 === 0 ? 'mb-24' : 'mt-24'}`} // Alternating position
               style={cardStyles[index]}
             >
@@ -83,9 +83,9 @@ const DesktopRoadmap = () => {
               <img src={milestone.img} className={`absolute w-20 bg-slate-300 left-1/3
                                 ${index % 2 === 0 ? 'h-12 top-full mt-10' : 'h-12 bottom-full mb-10'}`}/>
               <div className="bg-white rounded-lg shadow-xl h-full p-4 flex flex-col justify-center border-t-4 border-sky-500">
-                <p className="text-xs font-semibold text-slate-500">{milestone.step}</p>
-                <h3 className="text-base font-bold text-slate-800">{milestone.title}</h3>
-                <p className="text-sm italic text-slate-600">{milestone.subtitle}</p>
+                <p className="text-[0.50rem] md:text-xs font-semibold text-slate-500">{milestone.step}</p>
+                <h3 className="text-sm md:text-base font-bold text-slate-800">{milestone.title}</h3>
+                <p className="text-xs md:text-sm italic text-slate-600">{milestone.subtitle}</p>
               </div>
             </div>
           ))}
@@ -127,12 +127,7 @@ export default function Timeline() {
         <p className="text-slate-600 max-w-2xl mx-auto">Our journey from an idea to a market-ready product, presented in an interactive timeline.</p>
       </div>
 
-      <div className="hidden md:block">
-        <DesktopRoadmap />
-      </div>
-      <div className="md:hidden px-4">
-        <MobileRoadmap />
-      </div>
+      <DesktopRoadmap />
     </div>
   );
 }

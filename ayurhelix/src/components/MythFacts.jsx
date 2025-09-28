@@ -20,7 +20,7 @@ const mythFactData = [
 // --- The Main Component ---
 export default function MythsFacts() {
   return (
-    <section className="bg-white md:py-16 px-4 sm:px-6 lg:px-8">
+    <section className="bg-white md:py-16 px-4 sm:px-6 lg:px-8 mt-10 md:mt-6">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-md md:text-3xl font-bold text-[#395c37] sm:text-4xl">
@@ -51,14 +51,14 @@ export default function MythsFacts() {
         </div>
         <div className="md:hidden grid grid-cols-1 md:grid-cols-3 gap-8">
           {mythFactData.map((item, index) => (
-            <div key={index} className="flex justify-around mx-2 space-y-6">
+            <div key={index} className="flex justify-around mx-2">
               {/* Myth Card */}
                 <div className="w-1/2 md:w-full flex items-start space-x-4">
-                  <HoverCard frontContent={"Myth"} backContent={item.myth} color="bg-[#dec493]"/>
+                  <HoverCard height={"h-30"} frontContent={"Myth"} backContent={item.myth} color="bg-[#dec493]"/>
                 </div>
               {/* Fact Card */}
                 <div className="w-1/2 md:w-full flex items-start space-x-4 ml-2">
-                  <HoverCard frontContent={"Fact"} backContent={item.fact} color="bg-[#395c37]"/>
+                  <HoverCard height={"h-30"} frontContent={"Fact"} backContent={item.fact} color="bg-[#395c37]"/>
                 </div>
             </div>
           ))}

@@ -108,7 +108,7 @@ const Home = () => {
             <img
               src={item.img}
               alt="Validation logos"
-              className="h-10 md:h-30 lg:mx-20 mx-10"
+              className="h-20 md:h-30 lg:mx-20 mx-10"
               key={index}
             />
           ))}
@@ -120,28 +120,27 @@ const Home = () => {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
         viewport={{ once: true }}
-        className="relative flex justify-around items-center bg-white/80 backdrop-blur-md p-1 md:px-10 max-w-full overflow-hidden"
+        className="relative flex justify-around items-center p-1 md:px-10 max-w-full "
       >
         {/* Left Content */}
 
         <div className="relative gap-6">
           {/* Glowing Background */}
-          <div className="absolute bg-white w-1/3" />
           <motion.img
             src="/assets/Product.png"
             alt="Glycomics Product"
             whileHover={{ scale: 1.08, rotate: 2 }}
             transition={{ type: "spring", stiffness: 200 }}
-            className="relative z-10 mx-auto w-full w-[40vw] md:w-[15vw] drop-shadow-2xl"
+            className="relative z-10 mx-auto w-full w-[40vw] md:w-[20vw] drop-shadow-2xl"
           />
         </div>
         {/* Right Content - Product Image */}
-        <div className="max-w-md ml-5">
+        <div className="w-2/3 ml-5">
           <motion.h3
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-lg lg:text-3xl font-bold bg-gradient-to-r from-yellow-500 to-green-600 bg-clip-text text-[#216041] mt-6 md:mb-6"
+            className="text-xl lg:text-3xl font-bold bg-gradient-to-r from-yellow-500 to-green-600 bg-clip-text text-[#216041] mt-6 md:mb-6"
           >
             Introducing Glycomics
           </motion.h3>
@@ -175,13 +174,13 @@ const Home = () => {
               </motion.li>
             ))}
           </motion.ul>
-          <p className="md:hidden text-xs text-gray-500 italic">
+          <p className="md:hidden text-md text-gray-500 italic">
             Experience the fast-acting power of science with the safety of Ayurveda. Glycomics is your clinically-proven, herbal solution to manage sugar levels without compromise. Heal with nature, backed by science
           </p>
           <motion.div className="text-center" variants={fadeInFromBottom}>
             <Link
               to="/innovation"
-              className="w-2/5 md:w-full lg:w-auto inline-block bg-[#395c37] text-white font-bold py-0.5 md:py-3 px-3 md:px-8 rounded-full text-sm md:text-lg shadow-lg hover:bg-[#F4F1DE] hover:text-[#3A5A40] transition-transform transform hover:scale-105 my-2 item-center"
+              className="w-3/4 md:w-full lg:w-auto inline-block bg-[#395c37] text-white font-bold py-0.5 md:py-3 px-3 md:px-8 rounded-full text-sm md:text-lg shadow-lg hover:bg-[#F4F1DE] hover:text-[#3A5A40] transition-transform transform hover:scale-105 my-2 item-center"
             >
               Know More
             </Link>
