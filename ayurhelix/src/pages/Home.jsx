@@ -89,7 +89,7 @@ const Home = () => {
             <img
               src={item.img}
               alt="Validation logos"
-              className="h-40 lg:mx-20 mx-10"
+              className="h-20 md:h-40 lg:mx-20 mx-10"
               key={index}
             />
           ))}
@@ -113,7 +113,7 @@ const Home = () => {
             alt="Glycomics Product"
             whileHover={{ scale: 1.08, rotate: 2 }}
             transition={{ type: "spring", stiffness: 200 }}
-            className="relative z-10 mx-auto w-full h-140 drop-shadow-2xl"
+            className="relative z-10 mx-auto w-full w-[60vw] drop-shadow-2xl"
           />
         </div>
         {/* Right Content - Product Image */}
@@ -122,7 +122,7 @@ const Home = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-3xl font-bold bg-gradient-to-r from-yellow-500 to-green-600 bg-clip-text text-[#216041] mb-6"
+            className="text-2xl lg:text-3xl font-bold bg-gradient-to-r from-yellow-500 to-green-600 bg-clip-text text-[#216041] my-6"
           >
             Introducing Glycomics
           </motion.h3>

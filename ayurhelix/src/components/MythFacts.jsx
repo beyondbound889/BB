@@ -16,19 +16,6 @@ const mythFactData = [
   }
 ];
 
-// --- Icon Components for visual flair ---
-const MythIcon = () => (
-  <svg className="w-8 h-8 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636" />
-  </svg>
-);
-
-const FactIcon = () => (
-  <svg className="w-8 h-8 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-  </svg>
-);
-
 
 // --- The Main Component ---
 export default function MythsFacts() {
@@ -48,8 +35,8 @@ export default function MythsFacts() {
           {mythFactData.map((item, index) => (
             <div key={index} className="md:flex space-y-6">
               {/* Myth Card */}
-                <div className="flex items-start space-x-4">
-                  <HoverCard frontContent={"Myth"} backContent={item.myth}/>
+                <div className="flex items-start mx-2">
+                  <HoverCard frontContent={"Myth"} backContent={item.myth} color="bg-red-500"/>
                 </div>
             </div>
           ))}
@@ -57,22 +44,22 @@ export default function MythsFacts() {
             <div key={index} className="md:flex space-y-6">
               {/* Fact Card */}
                 <div className="flex items-start space-x-4">
-                  <HoverCard frontContent={"Fact"} backContent={item.fact}/>
+                  <HoverCard frontContent={"Fact"} backContent={item.fact} color="bg-green-500"/>
                 </div>
             </div>
           ))}
         </div>
         <div className="md:hidden grid grid-cols-1 md:grid-cols-3 gap-8">
           {mythFactData.map((item, index) => (
-            <div key={index} className="flex space-y-6">
+            <div key={index} className="flex flex-wrap justify-around mx-4 space-y-6">
               {/* Myth Card */}
                 <div className="flex items-start space-x-4">
-                  <HoverCard frontContent={"Myth"} backContent={item.myth}/>
+                  <HoverCard frontContent={"Myth"} backContent={item.myth} color="bg-red-500"/>
                 </div>
                 <div key={index} className="md:flex space-y-6">
               {/* Fact Card */}
                 <div className="flex items-start space-x-4 ml-2">
-                  <HoverCard frontContent={"Fact"} backContent={item.fact}/>
+                  <HoverCard frontContent={"Fact"} backContent={item.fact} color="bg-green-500"/>
                 </div>
             </div>
             </div>
