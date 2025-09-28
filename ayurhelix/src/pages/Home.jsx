@@ -12,7 +12,7 @@ const validation = [
     img: "/assets/Ayush.svg",
   },
   {
-    img: "/assets/Gmo.png",
+    img: "/assets/gmo.png",
   },
   {
     img: "/assets/Haccp.svg",
