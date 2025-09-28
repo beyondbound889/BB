@@ -1,4 +1,4 @@
-import {useState, useEffect} from 'react'
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import Timeline from "../components/Timeline";
@@ -12,7 +12,7 @@ const validation = [
     img: "/assets/Ayush.svg",
   },
   {
-    img: "/assets/gmo.png",
+    img: "/assets/Gmo.png",
   },
   {
     img: "/assets/Haccp.svg",
@@ -47,13 +47,13 @@ const HERO_IMAGE =
   "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80"; // Replace with your own image
 
 const Home = () => {
-  const [num, setNum]=useState(100015120.0)
-  useEffect(()=>{
-    const interval=setInterval(()=>{
-      setNum((prev)=>prev+0.2);
-    },1000)
-    return ()=>clearInterval(interval);
-  })
+  const [num, setNum] = useState(100015120.0);
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setNum((prev) => prev + 0.2);
+    }, 1000);
+    return () => clearInterval(interval);
+  });
   return (
     <div className="bg-white">
       <Helmet>
@@ -62,34 +62,53 @@ const Home = () => {
       </Helmet>
       {/* Hero Section */}
       <motion.section
-        className="relative bg-[#fff7e2] text-white overflow-hidden"
+        className="relative bg-[#fff7e2] overflow-hidden min-h-[60vh]"
         variants={containerVariants}
         initial="hidden"
         animate="visible"
-        style={{ minHeight: "50vh" }}
       >
-        {/* Hero Image */}
-        <video src="/assets/test.mp4" style={{zIndex:0}} controls autoplay muted loop className="absolute h-100 w-full">
+        {/* Hero background video */}
+        <video
+          src="/assets/test.mp4"
+          autoPlay
+          muted
+          loop
+          controls
+          className="absolute inset-0 w-full h-full object-cover z-0"
+        >
           Your browser does not support the video tag.
         </video>
-        <div className='flex justify-between'>
-          <div className="z-2 relative bg-white/20 p-4 shadow-md rounded-xl md:w-1/5 w-full mx-4 justify-center mt-20">
-          <h1 className="text-xl md:text-3xl text-black font-bold">Say goodbye to harmful side effects from diabetes medications</h1>
-        </div>
-        <div className="z-4 relative bg-white/20 p-4 shadow-md rounded-xl md:w-1/5 w-full mx-4 justify-center right-0 mt-40">
-          <h1 className='mt-2 text-black'>INDIA</h1>
-          <h1 className="mb-4 text-xl md:text-3xl text-black font-bold">Diabeties Paitients {num.toFixed(2)}</h1>
-        </div>
+
+        {/* Overlay content container */}
+        <div className="relative z-20 flex flex-col md:flex-row justify-between items-start md:items-center gap-6 p-6 md:p-12 max-w-screen-xl mx-auto">
+          {/* Left Info Box */}
+          <div className="bg-white/20 backdrop-blur-sm p-6 rounded-xl shadow-md md:w-1/3 w-1/2 text-black">
+            <h1 className="font-bold text-sm md:text-3xl">
+              Say goodbye to harmful side effects from diabetes medications
+            </h1>
+          </div>
+
+          {/* Right Info Box */}
+          <div className="bg-white/20 backdrop-blur-sm p-4 rounded-xl shadow-md md:w-1/5 w-1/2 text-black self-end md:self-center mt-40 md:mt-0">
+            <h2 className="text-sm md:text-lg font-semibold">INDIA</h2>
+            <h1 className="font-bold text-sm md:text-xl">
+              Diabetes Patients 
+            </h1>
+            <h1 className="text-sm md:text-xl text-red-800 text-bold">
+              {num.toFixed(2)}
+            </h1>
+          </div>
         </div>
       </motion.section>
+
       {/* Differentiators */}
-      <div className="bg-white p-6">
+      <div className="bg-white pt-2 md:my-6">
         <Marquee gradient={false} speed={80} className="text-white py-4">
           {validation.map((item, index) => (
             <img
               src={item.img}
               alt="Validation logos"
-              className="h-20 md:h-40 lg:mx-20 mx-10"
+              className="h-10 md:h-30 lg:mx-20 mx-10"
               key={index}
             />
           ))}
@@ -101,32 +120,31 @@ const Home = () => {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
         viewport={{ once: true }}
-        className="relative flex flex-col lg:flex-row justify-around items-center bg-white/80 backdrop-blur-md p-10 max-w-full overflow-hidden"
+        className="relative flex justify-around items-center bg-white/80 backdrop-blur-md p-1 md:px-10 max-w-full overflow-hidden"
       >
         {/* Left Content */}
 
-        <div className="relative">
+        <div className="relative gap-6">
           {/* Glowing Background */}
-          <div className="absolute bg-white" />
+          <div className="absolute bg-white w-1/3" />
           <motion.img
             src="/assets/Product.png"
             alt="Glycomics Product"
             whileHover={{ scale: 1.08, rotate: 2 }}
             transition={{ type: "spring", stiffness: 200 }}
-            className="relative z-10 mx-auto w-full w-[60vw] drop-shadow-2xl"
+            className="relative z-10 mx-auto w-full w-[40vw] md:w-[15vw] drop-shadow-2xl"
           />
         </div>
         {/* Right Content - Product Image */}
-        <div className="max-w-md">
+        <div className="max-w-md ml-5">
           <motion.h3
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-2xl lg:text-3xl font-bold bg-gradient-to-r from-yellow-500 to-green-600 bg-clip-text text-[#216041] my-6"
+            className="text-lg lg:text-3xl font-bold bg-gradient-to-r from-yellow-500 to-green-600 bg-clip-text text-[#216041] mt-6 md:mb-6"
           >
             Introducing Glycomics
           </motion.h3>
-
           <motion.ul
             initial="hidden"
             whileInView="visible"
@@ -138,7 +156,7 @@ const Home = () => {
                 transition: { staggerChildren: 0.15 },
               },
             }}
-            className="list-disc list-inside text-gray-700 space-y-3 text-lg"
+            className="hidden md:block list-disc list-inside text-gray-700 space-y-3 text-lg"
           >
             {[
               "As effective and fast as allopathy",
@@ -157,17 +175,13 @@ const Home = () => {
               </motion.li>
             ))}
           </motion.ul>
-
-          <p className="mt-6 text-sm text-gray-500 italic">
-            Dosage:{" "}
-            <span className="font-semibold text-gray-700">
-              Twice a day before meals
-            </span>
+          <p className="md:hidden text-xs text-gray-500 italic">
+            Experience the fast-acting power of science with the safety of Ayurveda. Glycomics is your clinically-proven, herbal solution to manage sugar levels without compromise. Heal with nature, backed by science
           </p>
           <motion.div className="text-center" variants={fadeInFromBottom}>
             <Link
               to="/innovation"
-              className="w-full lg:w-auto inline-block bg-[#395c37] text-white font-bold py-3 px-8 rounded-full text-lg shadow-lg hover:bg-[#F4F1DE] hover:text-[#3A5A40] transition-transform transform hover:scale-105 my-6 item-center"
+              className="w-2/5 md:w-full lg:w-auto inline-block bg-[#395c37] text-white font-bold py-0.5 md:py-3 px-3 md:px-8 rounded-full text-sm md:text-lg shadow-lg hover:bg-[#F4F1DE] hover:text-[#3A5A40] transition-transform transform hover:scale-105 my-2 item-center"
             >
               Know More
             </Link>

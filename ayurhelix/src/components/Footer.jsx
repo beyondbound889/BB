@@ -5,7 +5,7 @@ import { FaLinkedin } from "react-icons/fa";
 const Footer = () => {
   return (
     <footer className="bg-[#395c37] text-[#A3B18A]">
-      <div className="flex flex-col md:flex-row justify-between items-start md:items-center px-6 md:px-12 py-8 md:py-12 space-y-8 md:space-y-0">
+      <div className="flex flex-col md:flex-row justify-between items-start md:items-center px-6 md:px-12 py-8 md:py-8 space-y-8 md:space-y-0">
         <div className="container p-4 lg:w-1/3 flex flex-col items-center justify-center text-center">
           <h1 className="text-xl font-bold text-white mb-5">Office Location</h1>
           <iframe
@@ -19,13 +19,14 @@ const Footer = () => {
             referrerPolicy="no-referrer-when-downgrade"
           ></iframe>
         </div>
-        <div className="container mx-auto px-6 py-12 text-center">
+        <div className="container mx-auto px-6 py-10 text-center">
           <h3 className="text-2xl font-bold text-white font-['Source_Serif_4']">
             Beyond Bound<sup>®</sup>
           </h3>
-          <p className="mt-2 text-sm">Heal with Nature.</p>
-          <div className="pt-8 border-t border-gray-700 text-sm">
-            <p>&copy; 2025 Ayurhelix Pvt. Ltd. All Rights Reserved.</p>
+          <p className="mt-2 text-sm border-b pb-5">Heal with Nature</p>
+          <div className="pt-8 text-sm">
+            <h1>BioRiidl, Somaiya Vidya Vihar, Ghatkopar, Mumbai – 400077</h1>
+            <p>&copy; 2025 Ayurhelix Pvt. Ltd. All Rights Reserved</p>
           </div>
           <div className="flex items-center justify-center space-x-4 mt-4 text-2xl">
           <Link to="https://www.instagram.com/beyondbound_/"><BsInstagram /></Link>
@@ -33,7 +34,7 @@ const Footer = () => {
           <Link to="https://www.linkedin.com/company/beyond-bound/"><FaLinkedin /></Link>
         </div>
         </div>
-        <div className="container flex flex-col items-center lg:my-20 mb-20 text-center lg:w-1/3">
+        <div className="container flex flex-col items-center mb-20 text-left lg:w-1/3">
             <h2 className="text-xl text-white font-bold">Useful Links</h2>
             <ul>
                 <li>Privacy</li>

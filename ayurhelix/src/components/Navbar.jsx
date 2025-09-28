@@ -5,6 +5,7 @@ import Chat from "./Chat";
 const tabs = [
   { name: "Home", link: "/" },
   { name: "Innovation", link: "/innovation" },
+  { name: "Blog", link: "/blog" },
   { name: "About", link: "/about" },
 ];
 
@@ -70,7 +71,7 @@ const Navbar = () => {
                     : "text-white opacity-80 hover:text-[#dec493] transition text-lg"
                 }
               >
-                {tab.name}
+                <h1 className="font-bold">{tab.name}</h1>
               </NavLink>
             ))}
           </div>
@@ -89,8 +90,8 @@ const Navbar = () => {
               onClick={() => setIsOpen(false)}
               className={({ isActive }) =>
                 isActive
-                  ? "text-[#216041] font-semibold border-l-4 border-[#216041] pl-2 text-3xl"
-                  : "text-black opacity-70 hover:text-[#216041] transition pl-2 text-3xl"
+                  ? "text-[#216041] font-semibold border-l-4 border-[#216041] pl-2 text-xl"
+                  : "text-black opacity-70 hover:text-[#216041] transition pl-2 text-xl"
               }
             >
               {tab.name}

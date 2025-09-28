@@ -59,7 +59,7 @@ const ingredients = [
 
 const Innovation = () => {
   return (
-    <section className="bg-[#dec493] text-gray-800 py-16">
+    <section className="bg-white text-gray-800 pb-16">
       <Helmet>
         <title>Know our Innovations</title>
         <meta name="description" content="Killing Diabeties Safely" />
@@ -70,12 +70,12 @@ const Innovation = () => {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
         viewport={{ once: true }}
-        className="text-center mb-12"
+        className="text-center mb-12 bg-[#dec493] py-16"
       >
-        <h2 className="text-4xl font-bold text-[#3b3b3b]">
+        <h2 className="text-4xl font-bold text-[#395c37]">
           Innovation Without Compromise
         </h2>
-        <p className="mt-4 text-lg text-gray-600 max-w-3xl mx-auto">
+        <p className="mt-4 text-lg text-black/80 max-w-3xl mx-auto">
           “Diabetes care comes with a bitter choice: Fast but risky allopathy,
           or safe but slow Ayurveda. Why should healing come with harm or
           compromise?”
@@ -120,12 +120,13 @@ const Innovation = () => {
         </div>
       </motion.section>
       {/* Glycomics Solution */}
-      <motion.div
+     <div className="bg-[#dec493] w-full">
+       <motion.div
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
         viewport={{ once: true }}
-        className="relative flex flex-col lg:flex-row justify-between items-center bg-white/80 backdrop-blur-md shadow-xl p-10 rounded-2xl border border-gray-200/40 max-w-6xl mx-auto mb-20 overflow-hidden my-10"
+        className="bg-[#dec493] relative flex flex-col lg:flex-row justify-between items-center bg-white/80 backdrop-blur-md shadow-xl p-10 rounded-2xl border border-gray-200/40 max-w-6xl mx-auto mb-20 overflow-hidden my-10"
       >
         {/* Left Content */}
         <div className="mx-10 max-w-md">
@@ -183,7 +184,7 @@ const Innovation = () => {
           <div className="absolute -inset-10 bg-gradient-to-tr from-emerald-300/30 to-blue-400/20 rounded-full blur-3xl animate-pulse" />
 
           <motion.img
-            src="/assets/Branding.png"
+            src="/assets/Product.png"
             alt="Glycomics Product"
             whileHover={{ scale: 1.08, rotate: 2 }}
             transition={{ type: "spring", stiffness: 200 }}
@@ -191,6 +192,10 @@ const Innovation = () => {
           />
         </div>
       </motion.div>
+     </div>
+      <div>
+        Testimonials
+      </div>
       <div className="text-center bg-white p-6">
         <h3 className="text-3xl font-bold text-[#216041] my-10">
           What makes it Different

@@ -39,7 +39,7 @@ const FlipCard = ({ frontContent, backContent, width = "w-64", height = "h-40", 
 
         {/* Back of the card */}
         <div
-          className="absolute inset-0 rounded-4xl shadow-lg bg-gradient-to-br from-gray-100 to-gray-300 text-gray-700 flex flex-col items-center justify-center p-6 text-lg sm:text-xl leading-relaxed"
+          className="absolute inset-0 rounded-4xl shadow-lg bg-gradient-to-br from-gray-100 to-gray-300 text-gray-700 flex flex-col items-center justify-center p-6 text-sm sm:text-xl leading-relaxed"
           style={{ backfaceVisibility: 'hidden', transform: 'rotateY(180deg)' }}
         >
           {backContent}

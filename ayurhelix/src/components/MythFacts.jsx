@@ -20,13 +20,13 @@ const mythFactData = [
 // --- The Main Component ---
 export default function MythsFacts() {
   return (
-    <section className="bg-white py-16 px-4 sm:px-6 lg:px-8">
+    <section className="bg-white md:py-16 px-4 sm:px-6 lg:px-8">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-[#395c37] sm:text-4xl">
+          <h2 className="text-md md:text-3xl font-bold text-[#395c37] sm:text-4xl">
             Myths vs Facts
           </h2>
-          <p className="mt-4 text-lg text-slate-600">
+          <p className="mt-4 text-xs md:text-lg text-slate-600">
             Separating misconceptions from the truth about our innovative Ayurvedic solutions.
           </p>
         </div>
@@ -36,7 +36,7 @@ export default function MythsFacts() {
             <div key={index} className="md:flex space-y-6">
               {/* Myth Card */}
                 <div className="flex items-start mx-2">
-                  <HoverCard frontContent={"Myth"} backContent={item.myth} color="bg-red-500"/>
+                  <HoverCard frontContent={"Myth"} backContent={item.myth} color="bg-[#dec493]"/>
                 </div>
             </div>
           ))}
@@ -44,24 +44,22 @@ export default function MythsFacts() {
             <div key={index} className="md:flex space-y-6">
               {/* Fact Card */}
                 <div className="flex items-start space-x-4">
-                  <HoverCard frontContent={"Fact"} backContent={item.fact} color="bg-green-500"/>
+                  <HoverCard frontContent={"Fact"} backContent={item.fact} color="bg-[#395c37]"/>
                 </div>
             </div>
           ))}
         </div>
         <div className="md:hidden grid grid-cols-1 md:grid-cols-3 gap-8">
           {mythFactData.map((item, index) => (
-            <div key={index} className="flex flex-wrap justify-around mx-4 space-y-6">
+            <div key={index} className="flex justify-around mx-2 space-y-6">
               {/* Myth Card */}
-                <div className="flex items-start space-x-4">
-                  <HoverCard frontContent={"Myth"} backContent={item.myth} color="bg-red-500"/>
+                <div className="w-1/2 md:w-full flex items-start space-x-4">
+                  <HoverCard frontContent={"Myth"} backContent={item.myth} color="bg-[#dec493]"/>
                 </div>
-                <div key={index} className="md:flex space-y-6">
               {/* Fact Card */}
-                <div className="flex items-start space-x-4 ml-2">
-                  <HoverCard frontContent={"Fact"} backContent={item.fact} color="bg-green-500"/>
+                <div className="w-1/2 md:w-full flex items-start space-x-4 ml-2">
+                  <HoverCard frontContent={"Fact"} backContent={item.fact} color="bg-[#395c37]"/>
                 </div>
-            </div>
             </div>
           ))}
         </div>
