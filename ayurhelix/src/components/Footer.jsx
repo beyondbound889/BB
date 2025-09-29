@@ -33,6 +33,7 @@ Jaspur, Udham Singh Nagar, Uttarakhand – 244712</h1>
             </ul>
         </div>
       </div>
+      <h1 className="flex justify-center -my-5 pb-5 hover:cursor-pointer hover:text-black"><a href="https://www.linkedin.com/in/ramanbansalsde/">Developed By Raman Bansal</a></h1>
     </footer>
   );
 };
