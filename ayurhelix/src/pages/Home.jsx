@@ -74,7 +74,6 @@ const Home = () => {
           autoPlay
           muted
           loop
-          controls
           className="absolute inset-0 w-full h-full object-cover z-0"
         >
           Your browser does not support the video tag.
@@ -85,7 +84,7 @@ const Home = () => {
           {/* Left Info Box */}
           <div className="bg-white/20 backdrop-blur-sm p-6 rounded-xl shadow-md md:w-1/3 w-1/2 text-black">
             <h1 className="font-bold text-sm md:text-3xl">
-              Say goodbye to harmful side effects from diabetes medications
+              Say goodbye to the side effects of diabetes medicines with fast-acting natural therapy
             </h1>
           </div>
 
