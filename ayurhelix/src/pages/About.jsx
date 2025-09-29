@@ -86,7 +86,10 @@ const About = () => {
               className="h-96 w-100 object-cover rounded-lg shadow-lg bg-[#dec493]"
               style={{borderRadius:"50%"}}
             />
-            <h3 className="mt-4 text-2xl font-bold text-center text-[#216041]">
+            <h1 className="mt-6 text-3xl font-bold text-center text-[#216041]">
+              Priyanshu Chauhan
+            </h1>
+            <h3 className="text-2xl text-center text-[#216041]">
               Director & Founder
             </h3>
             <p className="mt-2 text-center max-w-xs text-[#216041]">
@@ -107,7 +110,10 @@ const About = () => {
               className="h-96 w-100 object-cover shadow-lg bg-[#dec493]"
               style={{borderRadius:"50%"}}
             />
-            <h3 className="mt-4 text-2xl font-bold text-center text-[#216041]">
+             <h3 className="mt-6 text-3xl font-bold text-center text-[#216041]">
+              Dr. Meet Ramani
+            </h3>
+            <h3 className="text-2xl text-center text-[#216041]">
               R&D Head
             </h3>
             <p className="mt-2 text-center max-w-xs text-[#216041]">

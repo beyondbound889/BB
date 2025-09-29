@@ -60,8 +60,6 @@ const Home = () => {
         <title>Welcome to Beyond Bound</title>
         <meta name="description" content="Ayurvedic solutions for diabetes" />
         <meta name="keywords" content="Beyond Bound, Glycomics, Diabeties Treatment, Sugar Mediciene, Sugar Treatment, Diabeties ki dawayi, sugar ki dawayi, Allopathy, Alloathy Side-Effects, Slow Ayurveda"></meta>
-        <meta property="og:image" content="/assets/logo.png" />
-        <meta name="twitter:image" content="/assets/logo.png" />
       </Helmet>
       {/* Hero Section */}
       <motion.section
