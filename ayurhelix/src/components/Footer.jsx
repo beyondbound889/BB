@@ -25,8 +25,11 @@ const Footer = () => {
           </h3>
           <p className="mt-2 text-sm border-b pb-5">Heal with Nature</p>
           <div className="pt-8 text-sm">
-            <h1>BioRiidl, Somaiya Vidya Vihar, Ghatkopar, Mumbai – 400077</h1>
+            <h1>Communication Address: BioRiidl, Somaiya Vidya Vihar, Ghatkopar, Mumbai – 400077</h1>
+            <h1 className="mt-5">Registered Address: Moh. Natha Singh, Maharana Pratap Colony,
+Jaspur, Udham Singh Nagar, Uttarakhand – 244712</h1>
             <p>&copy; 2025 Ayurhelix Pvt. Ltd. All Rights Reserved</p>
+            <p className="mt-4">&copy; CIN- U47721UT2025PTC019778</p>
           </div>
           <div className="flex items-center justify-center space-x-4 mt-4 text-2xl">
           <Link to="https://www.instagram.com/beyondbound_/"><BsInstagram /></Link>

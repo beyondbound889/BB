@@ -26,7 +26,7 @@ const About = () => {
         <meta name="description" content="Beyond Bound Info" />
         <meta name="keywords" content="Ayurveda, Beyond Bound, Team"></meta>
       </Helmet>
-      <section className="flex flex-col items-center justify-center bg-white py-20 px-6 mx-auto text-center space-y-8">
+      <section className="bg-[#dec493] flex flex-col items-center justify-center py-20 px-6 mx-auto text-center space-y-8">
         <img
           src="https://res.cloudinary.com/dmvolzsaz/image/upload/v1758644988/12_dw3qfa.png"
           alt="logo"
@@ -51,8 +51,24 @@ const About = () => {
           </h2>
         </div>
       </section>
-
-      <section className="bg-[#dec493] py-20">
+        <section className="bg-white py-20 px-6">
+        <h1 className="flex justify-center text-5xl font-bold text-[#216041]">
+          About Ayurhelix
+        </h1>
+        <p className="mt-8 max-w-5xl mx-auto text-gray-700 text-lg leading-relaxed">
+          Ayurhelix Pvt Ltd, officially registered in August 2025, began its
+          journey as Beyond Bound in November 2023 with a single dream to
+          bring innovation into Ayurveda. This vision was deeply personal.
+          Inspired by the pain and struggles faced by his grandmother, Founder
+          Priyanshu Chauhan established the venture in 2023 to create solutions
+          that blend the ancient wisdom of Ayurveda with modern scientific
+          innovation. Today, Ayurhelix Pvt Ltd is committed to developing
+          clinically validated, safe, and effective Ayurvedic formulations that
+          can transform healthcare. The company is led by two directors, united
+          by a shared passion for impact, innovation, and well-being
+        </p>
+      </section>
+      <section className="bg-white py-20">
         <h1 className="flex justify-center text-5xl font-bold text-[#216041]">
           Team
         </h1>
@@ -67,7 +83,8 @@ const About = () => {
             <img
               src="/assets/Priyanshu.png"
               alt="CEO"
-              className="h-96 w-100 object-cover rounded-lg shadow-lg bg-white"
+              className="h-96 w-100 object-cover rounded-lg shadow-lg bg-[#dec493]"
+              style={{borderRadius:"50%"}}
             />
             <h3 className="mt-4 text-2xl font-bold text-center text-[#216041]">
               Director & Founder
@@ -87,7 +104,8 @@ const About = () => {
             <img
               src="/assets/Ramani.png"
               alt="Co-Founder"
-              className="h-96 w-100 object-cover rounded-lg shadow-lg bg-white"
+              className="h-96 w-100 object-cover shadow-lg bg-[#dec493]"
+              style={{borderRadius:"50%"}}
             />
             <h3 className="mt-4 text-2xl font-bold text-center text-[#216041]">
               R&D Head
@@ -98,23 +116,7 @@ const About = () => {
           </motion.div>
         </div>
       </section>
-      <section className="bg-white py-20 px-6">
-        <h1 className="flex justify-center text-5xl font-bold text-[#216041]">
-          About Ayurhelix
-        </h1>
-        <p className="mt-8 max-w-5xl mx-auto text-gray-700 text-lg leading-relaxed">
-          Ayurhelix Pvt Ltd, officially registered in August 2025, began its
-          journey as Beyond Bound in November 2023 with a single dream to
-          bring innovation into Ayurveda. This vision was deeply personal.
-          Inspired by the pain and struggles faced by his grandmother, Founder
-          Priyanshu Chauhan established the venture in 2023 to create solutions
-          that blend the ancient wisdom of Ayurveda with modern scientific
-          innovation. Today, Ayurhelix Pvt Ltd is committed to developing
-          clinically validated, safe, and effective Ayurvedic formulations that
-          can transform healthcare. The company is led by two directors, united
-          by a shared passion for impact, innovation, and well-being
-        </p>
-      </section>
+      
     </>
   );
 };

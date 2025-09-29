@@ -3,7 +3,7 @@ import { FaWhatsapp } from "react-icons/fa";
 const Chat = () => {
   return (
     <a
-  href="https://wa.me/919876543210"
+  href="https://wa.me/916396190643"
   target="_blank"
   rel="noopener noreferrer"
   className="fixed bottom-5 right-5 bg-green-600 rounded-full shadow-lg hover:bg-green-700 transition flex items-center justify-center"

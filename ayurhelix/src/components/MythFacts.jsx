@@ -54,11 +54,11 @@ export default function MythsFacts() {
             <div key={index} className="flex justify-around mx-2">
               {/* Myth Card */}
                 <div className="w-1/2 md:w-full flex items-start space-x-4">
-                  <HoverCard height={"h-30"} frontContent={"Myth"} backContent={item.myth} color="bg-[#dec493]"/>
+                  <HoverCard height={"h-40"} frontContent={"Myth"} backContent={item.myth} color="bg-[#dec493]"/>
                 </div>
               {/* Fact Card */}
                 <div className="w-1/2 md:w-full flex items-start space-x-4 ml-2">
-                  <HoverCard height={"h-30"} frontContent={"Fact"} backContent={item.fact} color="bg-[#395c37]"/>
+                  <HoverCard height={"h-40"} frontContent={"Fact"} backContent={item.fact} color="bg-[#395c37]"/>
                 </div>
             </div>
           ))}
