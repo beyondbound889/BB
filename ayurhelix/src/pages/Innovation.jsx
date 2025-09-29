@@ -63,6 +63,7 @@ const Innovation = () => {
       <Helmet>
         <title>Know our Innovations</title>
         <meta name="description" content="Killing Diabeties Safely" />
+        <meta name="keywords" content="Diabeties, Glycomics, Berberine, Karela, Jamun, Amla"></meta>
       </Helmet>
       {/* Header */}
       <motion.div

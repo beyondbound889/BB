@@ -24,6 +24,7 @@ const About = () => {
       <Helmet>
         <title>About Beyond Bound</title>
         <meta name="description" content="Beyond Bound Info" />
+        <meta name="keywords" content="Ayurveda, Beyond Bound, Team"></meta>
       </Helmet>
       <section className="flex flex-col items-center justify-center bg-white py-20 px-6 mx-auto text-center space-y-8">
         <img

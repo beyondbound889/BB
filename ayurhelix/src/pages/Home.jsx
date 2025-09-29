@@ -59,6 +59,7 @@ const Home = () => {
       <Helmet>
         <title>Welcome to Beyond Bound</title>
         <meta name="description" content="Ayurvedic solutions for diabetes" />
+        <meta name="keywords" content="Allopathy, Alloathy Side-Effects, Slow Ayurveda"></meta>
       </Helmet>
       {/* Hero Section */}
       <motion.section
