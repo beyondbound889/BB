@@ -1,7 +1,10 @@
-import React from "react";
+import React, {useEffect} from "react";
 import { motion } from "framer-motion";
 import { Helmet } from '@dr.pogodin/react-helmet';
 const About = () => {
+  useEffect(() => {
+  window.scrollTo(0, 0); // Scrolls to the top of the page
+}, []);
   const cardVariants = {
     offscreen: {
       opacity: 0,

@@ -49,6 +49,9 @@ const HERO_IMAGE =
 const Home = () => {
   const [num, setNum] = useState(100015120.0);
   useEffect(() => {
+  window.scrollTo(0, 0); // Scrolls to the top of the page
+}, []);
+  useEffect(() => {
     const interval = setInterval(() => {
       setNum((prev) => prev + 0.2);
     }, 1000);

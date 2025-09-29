@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 import { motion } from "framer-motion";
 import AnimatedCard from "../components/AnimatedCard";
 import Blogs from "../components/Blogs";
@@ -58,6 +58,9 @@ const ingredients = [
 ];
 
 const Innovation = () => {
+  useEffect(() => {
+  window.scrollTo(0, 0); // Scrolls to the top of the page
+}, []);
   return (
     <section className="bg-white text-gray-800 pb-16">
       <Helmet>
@@ -141,7 +144,7 @@ const Innovation = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
           viewport={{ once: true }}
-          className="bg-[#dec493] relative flex flex-col lg:flex-row justify-between items-center bg-white/80 backdrop-blur-md shadow-xl p-10 rounded-2xl border border-gray-200/40 max-w-6xl mx-auto mb-20 overflow-hidden my-10"
+          className="bg-[#dec493] relative flex flex-col lg:flex-row justify-between items-center bg-white/80 backdrop-blur-md shadow-xl p-5 md:p-10 rounded-2xl border border-gray-200/40 max-w-6xl mx-auto mb-20 overflow-hidden my-10"
         >
           {/* Left Content */}
           <div className="mx-10 max-w-md">
