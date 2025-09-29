@@ -1,10 +1,11 @@
-import React, {useEffect} from "react";
+import React, { useEffect } from "react";
 import { motion } from "framer-motion";
-import { Helmet } from '@dr.pogodin/react-helmet';
+import { Helmet } from "@dr.pogodin/react-helmet";
+import BrandValues from "../components/BrandValues";
 const About = () => {
   useEffect(() => {
-  window.scrollTo(0, 0); // Scrolls to the top of the page
-}, []);
+    window.scrollTo(0, 0); // Scrolls to the top of the page
+  }, []);
   const cardVariants = {
     offscreen: {
       opacity: 0,
@@ -29,7 +30,7 @@ const About = () => {
         <meta name="description" content="Beyond Bound Info" />
         <meta name="keywords" content="Ayurveda, Beyond Bound, Team"></meta>
       </Helmet>
-      <section className="bg-[#dec493] flex flex-col items-center justify-center py-20 px-6 mx-auto text-center space-y-8">
+      <section className="flex flex-col items-center justify-center py-20 px-6 mx-auto text-center space-y-8">
         <img
           src="https://res.cloudinary.com/dmvolzsaz/image/upload/v1758644988/12_dw3qfa.png"
           alt="logo"
@@ -54,23 +55,27 @@ const About = () => {
           </h2>
         </div>
       </section>
-        <section className="bg-white py-20 px-6">
+      <section className="bg-white py-20 px-6">
         <h1 className="flex justify-center text-5xl font-bold text-[#216041]">
-          About Ayurhelix
+          About Beyond Bound
         </h1>
         <p className="mt-8 max-w-5xl mx-auto text-gray-700 text-lg leading-relaxed">
-          Ayurhelix Pvt Ltd, officially registered in August 2025, began its
-          journey as Beyond Bound in November 2023 with a single dream to
-          bring innovation into Ayurveda. This vision was deeply personal.
-          Inspired by the pain and struggles faced by his grandmother, Founder
-          Priyanshu Chauhan established the venture in 2023 to create solutions
-          that blend the ancient wisdom of Ayurveda with modern scientific
-          innovation. Today, Ayurhelix Pvt Ltd is committed to developing
-          clinically validated, safe, and effective Ayurvedic formulations that
-          can transform healthcare. The company is led by two directors, united
-          by a shared passion for impact, innovation, and well-being
+          Beyond Bound, officially registered as Ayurhelix Pvt Ltd, began its
+          journey in November 2023 with a single, heartfelt dream to bring true
+          innovation to Ayurveda. This vision was not born in a boardroom, but
+          in the quiet moments of witnessing a loved one’s struggle. Inspired by
+          the pain and resilience of his grandmother, Founder Priyanshu Chauhan
+          set out to bridge the gap between ancient wisdom and modern science,
+          determined to create solutions that could offer real hope and
+          healing.In August 2025, the venture was formally incorporated as
+          Ayurhelix Pvt Ltd, strengthening the foundation of Beyond Bound.
+          Today, the company is committed to developing clinically validated,
+          safe, and effective Ayurvedic formulations that have the potential to
+          transform healthcare. Led by two directors, Ayurhelix stands united by
+          a shared passion for impact, innovation, and well-being.
         </p>
       </section>
+      <BrandValues/>
       <section className="bg-white py-20">
         <h1 className="flex justify-center text-5xl font-bold text-[#216041]">
           Team
@@ -87,7 +92,7 @@ const About = () => {
               src="/assets/Priyanshu.png"
               alt="CEO"
               className="h-96 w-100 object-cover rounded-lg shadow-lg bg-[#dec493]"
-              style={{borderRadius:"50%"}}
+              style={{ borderRadius: "50%" }}
             />
             <h1 className="mt-6 text-3xl font-bold text-center text-[#216041]">
               Priyanshu Chauhan
@@ -111,25 +116,22 @@ const About = () => {
               src="/assets/Ramani.png"
               alt="Co-Founder"
               className="h-96 w-100 object-cover shadow-lg bg-[#dec493]"
-              style={{borderRadius:"50%"}}
+              style={{ borderRadius: "50%" }}
             />
-             <h3 className="mt-6 text-3xl font-bold text-center text-[#216041]">
+            <h3 className="mt-6 text-3xl font-bold text-center text-[#216041]">
               Dr. Meet Ramani
             </h3>
-            <h3 className="text-2xl text-center text-[#216041]">
-              R&D Head
-            </h3>
+            <h3 className="text-2xl text-center text-[#216041]">R&D Head</h3>
             <p className="mt-2 text-center max-w-xs text-[#216041]">
               Passionate about creating impactful solutions.
             </p>
           </motion.div>
         </div>
+
       </section>
-      
     </>
   );
 };
-
 
 export default About;
 // 🏢 Official Company Details
