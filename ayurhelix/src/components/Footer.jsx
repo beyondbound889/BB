@@ -12,7 +12,7 @@ const Footer = () => {
           </h3>
           <p className="mt-2 text-sm border-b pb-5">Heal with Nature</p>
           <div className="pt-8 text-sm">
-            <h1 className="text-2xl">Office Address: Vidya Vihar, Ghatkopar, Mumbai – 400077</h1>
+            <h1 className="text-2xl text-[#c9d6b2]">Office Address: Vidya Vihar, Ghatkopar, Mumbai – 400077</h1>
             <h1 className="mt-5">Registered Address: Moh. Natha Singh, Maharana Pratap Colony,
 Jaspur, Udham Singh Nagar, Uttarakhand – 244712</h1>
             <p>&copy; 2025 Ayurhelix Pvt. Ltd. All Rights Reserved</p>
