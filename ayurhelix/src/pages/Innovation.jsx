@@ -1,6 +1,6 @@
 import React, {useEffect} from "react";
 import { motion } from "framer-motion";
-import AnimatedCard from "../components/AnimatedCard";
+import AnimatedCard from "../components/util/AnimatedCard";
 import Blogs from "../components/Blogs";
 import { Helmet } from "@dr.pogodin/react-helmet";
 // Animation variants (add these!)

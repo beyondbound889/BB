@@ -1,5 +1,5 @@
 import React from 'react';
-import HoverCard from '../components/HoverCard'
+import HoverCard from './util/HoverCard'
 // --- Data for the myths and facts ---
 const mythFactData = [
   {

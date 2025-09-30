@@ -25,11 +25,11 @@ Jaspur, Udham Singh Nagar, Uttarakhand – 244712</h1>
         </div>
         </div>
         <div className="container flex flex-col items-center mb-20 text-left lg:w-1/3">
-            <h2 className="text-xl text-white font-bold">Useful Links</h2>
+            <h2 className="text-xl text-white font-bold">Quick Links</h2>
             <ul>
-                <li>Privacy</li>
-                <li>Terms of Service</li>
-                <li>FAQs</li>
+                <li><Link to="/privacy">Privacy</Link></li>
+                <li><Link to="/tos">Terms of Service</Link></li>
+                <li><Link to="faqs">FAQs</Link></li>
             </ul>
         </div>
       </div>

@@ -6,6 +6,9 @@ import Home from "./pages/Home";
 import Innovation from "./pages/Innovation";
 import About from "./pages/About";
 import Blog from "./pages/Blog";
+import Privacy from "./pages/Privacy";
+import Tos from "./pages/Tos";
+import FaQs from "./pages/FaQs";
 import "./App.css";
 function App() {
   return (
@@ -20,6 +23,9 @@ function App() {
               <Route path="/innovation" element={<Innovation />} />
               <Route path="/about" element={<About />} />
               <Route path="/blog" element={<Blog />} />
+              <Route path="/privacy" element={<Privacy />} />
+              <Route path="/tos" element={<Tos />} />
+              <Route path="/faqs" element={<FaQs />} />
             </Routes>
           </main>
           <Footer />
