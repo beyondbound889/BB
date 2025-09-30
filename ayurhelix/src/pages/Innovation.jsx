@@ -98,47 +98,8 @@ const Innovation = () => {
           </p>
         </div>
       </motion.div>
-
-      <motion.section
-        className="py-12 md:py-20 bg-white overflow-hidden"
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.3 }}
-        variants={containerVariants}
-      >
-        <div className="container mx-auto px-6">
-          <motion.div variants={fadeInFromBottom} className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold font-['Source_Serif_4'] text-[#216041]">
-              The Unaddressed Challenge in Diabetes Care
-            </h2>
-          </motion.div>
-          <div className="grid md:grid-cols-2 gap-8 text-center">
-            <motion.div
-              variants={scaleIn}
-              className="bg-[#dec493] p-8 rounded-lg shadow-md border-l-4 border-[#588157]"
-            >
-              <h3 className="text-xl font-bold text-[#3A5A40] font-['Source_Serif_4'] mb-2">
-                Allopathy's Dilemma
-              </h3>
-              <p>Effective, but with severe long-term side effects.</p>
-            </motion.div>
-            <motion.div
-              variants={scaleIn}
-              className="bg-[#dec493] p-8 rounded-lg shadow-md border-l-4 border-[#A3B18A]"
-            >
-              <h3 className="text-xl font-bold text-[#3A5A40] font-['Source_Serif_4'] mb-2">
-                Ayurveda's Limitation
-              </h3>
-              <p>
-                Safe, but traditionally slow-acting and lacks clinical
-                validation.
-              </p>
-            </motion.div>
-          </div>
-        </div>
-      </motion.section>
       {/* Glycomics Solution */}
-      <div className="bg-[#dec493] w-full">
+      <div className="bg-white w-full">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}

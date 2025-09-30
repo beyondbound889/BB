@@ -59,7 +59,7 @@ const About = () => {
         <h1 className="flex justify-center text-5xl font-bold text-[#216041]">
           About Beyond Bound
         </h1>
-        <p className="mt-8 max-w-5xl mx-auto text-gray-700 text-lg leading-relaxed">
+        <p className="mt-8 max-w-5xl mx-auto text-gray-700 text-lg leading-relaxed text-center">
           Beyond Bound, officially registered as Ayurhelix Pvt Ltd, began its
           journey in November 2023 with a single, heartfelt dream to bring true
           innovation to Ayurveda. This vision was not born in a boardroom, but
