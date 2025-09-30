@@ -74,7 +74,7 @@ const Innovation = () => {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
         viewport={{ once: true }}
-        className="text-center mb-12 bg-[#dec493] py-16 px-4 sm:px-6 md:px-12"
+        className="text-center bg-[#dec493] py-8 px-4 sm:px-6 md:px-12"
       >
         <h2 className="text-3xl sm:text-4xl font-bold text-[#395c37] max-w-4xl mx-auto">
           Innovation Without Compromise
@@ -144,7 +144,7 @@ const Innovation = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
           viewport={{ once: true }}
-          className="bg-[#dec493] relative flex flex-col lg:flex-row justify-between items-center bg-white/80 backdrop-blur-md shadow-xl p-5 md:p-10 rounded-2xl border border-gray-200/40 max-w-6xl mx-auto mb-20 overflow-hidden my-10"
+          className="bg-[#dec493] relative flex flex-col lg:flex-row justify-between items-center bg-white/80 backdrop-blur-md shadow-xl p-5 md:p-10 rounded-2xl border border-gray-200/40 max-w-6xl mx-auto mb-20 overflow-hidden my-1"
         >
           {/* Left Content */}
           <div className="mx-10 max-w-md">
@@ -211,8 +211,8 @@ const Innovation = () => {
           </div>
         </motion.div>
       </div>
-      <div className="text-center bg-white p-6">
-        <h3 className="text-3xl font-bold text-[#216041] my-10">
+      <div className="text-center bg-white p-3">
+        <h3 className="text-3xl font-bold text-[#216041] mb-10">
           What makes it Different
         </h3>
         <div className="flex flex-col lg:flex-row gap-6">

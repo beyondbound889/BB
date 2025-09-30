@@ -41,7 +41,7 @@ const MythFactCard = ({ item }) => {
     <div className="relative flex items-stretch w-full max-w-lg mx-auto h-40 shadow-lg rounded-xl">
       {/* Myth Block */}
       <div
-        className={`w-1/2 ${item.mythColor} p-4 rounded-l-xl flex items-center`}
+        className={`w-3/7 ${item.mythColor} p-4 rounded-l-xl flex items-center`}
         style={{
           clipPath: "polygon(0% 0%, 90% 0%, 100% 50%, 90% 100%, 0% 100%)",
         }}
@@ -53,7 +53,7 @@ const MythFactCard = ({ item }) => {
       </div>
 
       {/* Arrow in the Center */}
-      <div className="absolute z-10 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+      <div className="absolute z-10 top-1/2 left-3/7 transform -translate-x-1/2 -translate-y-1/2">
         <div className="bg-white rounded-full p-2 shadow-md">
           <FiArrowRight className="text-gray-800" size={20} />
         </div>
@@ -61,7 +61,7 @@ const MythFactCard = ({ item }) => {
 
       {/* Fact Block */}
       <div
-        className={`w-1/2 ${item.factColor} p-4 rounded-r-xl flex items-center justify-end text-right`}
+        className={`w-4/7 ${item.factColor} p-4 rounded-r-xl flex items-center justify-end text-right`}
         style={{
           clipPath: "polygon(10% 0%, 100% 0%, 100% 100%, 10% 100%, 0% 50%)",
         }}
