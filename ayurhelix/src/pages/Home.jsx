@@ -15,7 +15,7 @@ const validation = [
     img: "/assets/gmo.png",
   },
   {
-    img: "/assets/Haccp.svg",
+    img: "/assets/haccp.jpeg",
   },
   {
     img: "/assets/ISO.svg",
@@ -112,7 +112,7 @@ const Home = () => {
             <img
               src={item.img}
               alt="Validation logos"
-              className="h-20 md:h-30 lg:mx-20 mx-10"
+              className="h-20 md:h-30 lg:mx-20 mx-10 bg-transparent"
               key={index}
             />
           ))}
