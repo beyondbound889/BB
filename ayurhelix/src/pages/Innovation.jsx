@@ -152,7 +152,7 @@ const Innovation = () => {
             <p className="mt-6 text-sm text-gray-500 italic">
               Dosage:{" "}
               <span className="font-semibold text-gray-700">
-                Twice a day before meals
+                Twice a day before the meals
               </span>
             </p>
           </div>
