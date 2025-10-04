@@ -226,7 +226,7 @@ const Innovation = () => {
             <img
               src="/assets/Product.png"
               alt="Ayurveda"
-              className="w-5 h-25 sm:w-1/5 object-cover rounded-md"
+              className="w-25 h-30 object-cover"
             />
             <div>
               <h3 className="text-lg sm:text-xl font-bold text-[#3A5A40] font-['Source_Serif_4'] mb-2">
