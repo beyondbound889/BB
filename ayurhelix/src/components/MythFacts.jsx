@@ -85,8 +85,7 @@ export default function MythsFacts() {
             <span className="text-[#dec493]">Myths v</span>/s Facts
           </h2>
           <p className="mt-1 text-md md:text-lg text-slate-600">
-            Separating misconceptions from the truth about our innovative
-            Ayurvedic solutions.
+           Bursting misconceptions and revealing the truth about our innovative Ayurvedic solutions
           </p>
         </div>
 

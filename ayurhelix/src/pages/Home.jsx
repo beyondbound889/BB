@@ -6,6 +6,7 @@ import Risks from "../components/Risks";
 import Marquee from "react-fast-marquee";
 import MythFacts from "../components/MythFacts";
 import { Helmet } from "@dr.pogodin/react-helmet";
+import DiabetesStats from "../components/stats";
 // Animation variants
 const validation = [
   {
@@ -146,10 +147,10 @@ const Home = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-xl lg:text-3xl font-bold bg-gradient-to-r from-yellow-500 to-green-600 bg-clip-text text-[#216041] mt-6 md:mb-6"
           >
-            Introducing Glycomics
+            Introducing Glycomics - Natural Ayurvedic Solution for Diabetes
           </motion.h3>
           <p className="text-md md:text-2xl text-gray-500 italic">
-            Experience the fast-acting power of science with the safety of Ayurveda. Glycomics is your clinically-proven, herbal solution to manage sugar levels without compromise. Heal with nature, backed by science
+            Ayurvedic treatment for diabetes that has been clinically validated. Experience the safety of Ayurveda blended with the effectiveness of science. Manage your blood sugar levels with the help of this herbal medication that guarantees effective diabetes treatment without sacrificing quality
           </p>
           <motion.div className="text-center" variants={fadeInFromBottom}>
             <Link

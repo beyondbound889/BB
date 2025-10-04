@@ -22,7 +22,7 @@ export default function AnimatedCard({ item, index }) {
 
   return (
     <motion.div
-      className="relative w-72 h-24 md:h-48 min-w-[14rem] rounded-xl overflow-hidden shadow-lg cursor-pointer group flex-1"
+      className="relative w-72 h-24 md:h-48 min-w-[10rem] rounded-xl overflow-hidden shadow-lg cursor-pointer group flex-1"
       whileHover="hover"
       initial="rest"
       animate={animationState}

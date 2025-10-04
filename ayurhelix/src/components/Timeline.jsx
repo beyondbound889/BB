@@ -124,7 +124,7 @@ export default function Timeline() {
     <div className="font-sans w-full mx-auto my-10">
       <div className="text-center mb-12 px-4">
         <h1 className="text-3xl md:text-4xl font-bold text-slate-800 mb-4">Our Roadmap</h1>
-        <p className="text-slate-600 max-w-2xl mx-auto">Our journey from an idea to a market-ready product, presented in an interactive timeline.</p>
+        <p className="text-slate-600 max-w-2xl mx-auto">Our journey from an idea to a market-ready product</p>
       </div>
 
       <DesktopRoadmap />

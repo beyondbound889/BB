@@ -120,7 +120,7 @@ export default function Risks() {
                 Diabetes Medication & Side Effects
             </h2>
             <p className="mt-4 text-lg text-gray-600">
-                An interactive overview of common drug classes and their impact.
+                An overview of common allopathic drugs and their impact
             </p>
         </div>
 
