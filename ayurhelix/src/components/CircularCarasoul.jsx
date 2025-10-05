@@ -49,7 +49,7 @@ const CircularCarousel = () => {
   const carouselRotation = -activeIndex * angle;
 
   return (
-    <div className="relative flex flex-col items-center justify-center w-full h-[60vh] md:h-screen  text-white overflow-hidden">
+    <div className="relative flex flex-col items-center justify-center w-full h-[60vh] md:h-screen  text-white overflow-hidden my-5">
 
       {/* --- CIRCLE CONTAINER --- */}
       {/* This container holds the rotating items */}
