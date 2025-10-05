@@ -113,7 +113,7 @@ const MedicationCard = ({ med }) => {
 // --- The Main Component that renders all the cards ---
 export default function Risks() {
   return (
-    <div className="px-4 py-16 bg-gray-50">
+    <div className="hidden px-4 py-16 bg-gray-50">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-800 sm:text-4xl">
