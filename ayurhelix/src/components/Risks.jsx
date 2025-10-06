@@ -9,7 +9,7 @@ const drugClasses = [
       pancreatitisRisk: "Low Risk",
       kidneyImpact: "High Risk",
       heartRisk: "Safe",
-      reference: "https://pubmed.ncbi.nlm.nih.gov/26880410/"
+      reference: "https://pmc.ncbi.nlm.nih.gov/articles/PMC5797060/"
     },
     {
       class: "DPP-4 Inhibitors",
@@ -25,7 +25,7 @@ const drugClasses = [
       pancreatitisRisk: "High Risk",
       kidneyImpact: "Kidney protective",
       heartRisk: "Heart protective",
-      reference: "https://www.nejm.org/doi/full/10.1056/NEJMoa1811744"
+      reference: "https://pmc.ncbi.nlm.nih.gov/articles/PMC9716078/"
     },
     {
       class: "Sulfonylureas",
@@ -41,7 +41,7 @@ const drugClasses = [
       pancreatitisRisk: "No Risk",
       kidneyImpact: "Moderate Risk",
       heartRisk: "High Heart Failure Risk",
-      reference: "https://www.sciencedirect.com/science/article/abs/pii/S0168822718302086"
+      reference: "https://www.ncbi.nlm.nih.gov/books/NBK551656/"
     },
     {
       class: "GLP-1 Receptor Agonists",
@@ -49,7 +49,7 @@ const drugClasses = [
       pancreatitisRisk: "High Risk",
       kidneyImpact: "Kidney Protective",
       heartRisk: "Heart Protective",
-      reference: "https://onlinelibrary.wiley.com/doi/full/10.1002/dmrr.2835"
+      reference: "https://pmc.ncbi.nlm.nih.gov/articles/PMC11818918/"
     },
 ];
 
@@ -113,7 +113,7 @@ const MedicationCard = ({ med }) => {
 // --- The Main Component that renders all the cards ---
 export default function Risks() {
   return (
-    <div className="hidden px-4 py-16 bg-gray-50">
+    <div className="px-4 py-16 bg-gray-50">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-800 sm:text-4xl">
