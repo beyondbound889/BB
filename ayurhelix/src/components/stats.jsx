@@ -26,7 +26,7 @@ const StatItem = ({ label, target, suffix = '', fraction = false, url=""}) => {
   const displayValue = useCountUp(target, 1400);
 
   return (
-    <a href={url} target='_blank' className="flex flex-col items-center w-1/2 sm:w-1/3 md:w-1/5 p-3">
+    <a href={url} target='_blank' className="flex flex-col items-center w-1/2 sm:w-1/3 md:w-1/4 p-3">
       <div>
       <div className="text-3xl md:text-6xl font-semibold tabular-nums text-[#395c37]">
         {fraction
@@ -42,11 +42,10 @@ const StatItem = ({ label, target, suffix = '', fraction = false, url=""}) => {
 
 const DiabetesStats = () => (
   <div className="bg-[#dec493] py-8 px-2 md:px-10 flex flex-wrap justify-center items-center gap-y-4">
-    <StatItem label="Adults at High Risk" target={1} suffix=" in 8" fraction />
-    <StatItem label="Annual Diabetes Deaths" target={3.4} suffix='M'/>
-    <StatItem label="Patients show B12 deficiency after using metformin" target={30} suffix="%" url="https://www.sciencedirect.com/science/article/pii/S2352385917302657?utm_source=chatgpt.com"/>
-    <StatItem label="Heart Failure using some Allopathic medicine" url="https://www.acc.org/sitecore/content/Sites/ACC/Home/Latest-in-Cardiology/Articles/2019/12/10/12/18/What-Percentage-of-Diabetes-Patients-Taking-TZDs-Show-Signs-of-HF" target={40} suffix="%" />
-    <StatItem label="Projected by 2050" target={853} suffix='M' />
+    <StatItem label="Patients kidney Decreased after uses metformin" target={98} suffix="%+" fraction url="https://pmc.ncbi.nlm.nih.gov/articles/PMC5797060/" />
+    <StatItem label="Pancreas side affects after using some allopathic anti diabetic medicine" target={80} suffix='%+' url="https://pmc.ncbi.nlm.nih.gov/articles/PMC9716078/"/>
+    <StatItem label="Patients show B12 deficiency after using metformin" target={28} suffix="%+" url="https://www.sciencedirect.com/science/article/pii/S2352385917302657?utm_source=chatgpt.com"/>
+    <StatItem label="Heart Failure using some Allopathic Antidiabetic medicine" url="https://www.acc.org/sitecore/content/Sites/ACC/Home/Latest-in-Cardiology/Articles/2019/12/10/12/18/What-Percentage-of-Diabetes-Patients-Taking-TZDs-Show-Signs-of-HF" target={38} suffix="%+" />
   </div>
 );
 
